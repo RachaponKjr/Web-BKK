@@ -1,0 +1,134 @@
+root {
+  --color-primary: #03754a;
+  --text-color: #333333;
+  --text-color-2: #666666;
+  --text-color-white: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bg-image-bkk {
+  background-image: url("../images/bkk_map.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10rem;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* รูปแบบ ตัวอักษร */
+.text-header {
+  font-size: 25px;
+  font-weight: normal;
+}
+.text-normal {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* ขนาดตัวอักษร */
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-md {
+  font-size: 16px;
+}
+.text-lg {
+  font-size: 18px;
+}
+.text-xl {
+  font-size: 20px;
+}
+.text-2xl {
+  font-size: 24px;
+}
+
+/* ความหนาของตัวอักษร */
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+.medium {
+  font-weight: 500;
+}
+.light {
+  font-weight: 300;
+}
+.thin {
+  font-weight: 100;
+}
+.regular {
+  font-weight: 400;
+}
+.semi-bold {
+  font-weight: 600;
+}
+
+/* สีตัวอักษร */
+.text-color-m {
+  color: #333333;
+}
+.text-color-w {
+  color: #ffffff;
+}
+.text-color-2 {
+  color: #666666;
+}
+.text-color-main {
+  color: #03754a;
+}
+
+/* ระยะห่าง Gap */
+.gap-2 {
+  gap: 8px;
+}
+.gap-4 {
+  gap: 16px;
+}
+.gap-6 {
+  gap: 24px;
+}
+.gap-7 {
+  gap: 28px;
+}

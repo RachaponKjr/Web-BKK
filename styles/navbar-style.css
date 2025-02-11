@@ -1,0 +1,126 @@
+.navbar {
+  padding: 30px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #cccccc;
+}
+.navbar-menu {
+  padding: 16px 24px;
+  background: rgb(5, 105, 66);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 105, 66, 1) 0%,
+    rgba(4, 73, 105, 1) 100%
+  );
+  border-radius: 100px;
+}
+
+.text-navbar {
+  font-weight: 400;
+  font-size: 15px;
+  /* line-height: 24px; */
+  color: #ffffff;
+}
+
+.text-navbar a:hover {
+  color: #ffd55e;
+}
+
+a[active] {
+  color: #ffd55e;
+}
+
+.toggle-lang {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 100%;
+}
+
+.hamburger-menu {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: rgb(5, 105, 66);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 105, 66, 1) 0%,
+    rgba(4, 73, 105, 1) 100%
+  );
+  width: 41px;
+  border-radius: 10px;
+}
+
+/* สำหรับมือถือแนวตั้ง (Portrait) */
+@media (max-width: 575px) {
+  /* CSS สำหรับมือถือเล็ก */
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .toggle-lang {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+/* สำหรับมือถือแนวนอนหรือมือถือใหญ่ */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* CSS สำหรับมือถือขนาดกลาง */
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .toggle-lang {
+    display: none;
+  }
+}
+
+/* สำหรับแท็บเล็ต */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* CSS สำหรับแท็บเล็ต */
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .toggle-lang {
+    display: none;
+  }
+}
+
+/* สำหรับหน้าจอขนาดเล็ก เช่น Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* CSS สำหรับ Laptop */
+  .text-navbar {
+    font-size: 12px;
+    gap: 16px !important;
+  }
+  .navbar {
+    gap: 8px;
+    background: transparent;
+    border-bottom: none;
+  }
+  .hamburger-menu {
+    display: none !important;
+  }
+}
+
+/* สำหรับหน้าจอขนาดใหญ่ เช่น Desktop */
+@media (min-width: 1200px){
+  /* CSS สำหรับ Desktop ขนาดปกติ */
+  .hamburger-menu {
+    display: none !important;
+  }
+  .navbar {
+    background: transparent;
+    border-bottom: none;
+  }
+}

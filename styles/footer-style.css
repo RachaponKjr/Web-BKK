@@ -1,0 +1,103 @@
+root {
+  --color-primary: #03754a;
+  --text-color: #333333;
+  --text-color-2: #666666;
+  --text-color-white: #ffffff;
+}
+.bg-footer {
+  background-color: #f5f5f7;
+  height: min-content;
+}
+
+.t-footer-h {
+  font-weight: 600;
+  font-size: 14px;
+  color: #666666;
+}
+
+.t-footer-s {
+  font-weight: 400;
+  font-size: 14px;
+  color: #666666;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 10px; */
+  gap: 0px;
+  row-gap: 20px;
+}
+.t-footer-contact {
+  font-weight: 400;
+  font-size: 14px;
+  color: #666666;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* gap: 10px; */
+  gap: 0px;
+  row-gap: 20px;
+}
+.footer-temp {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+
+.container-footer {
+  padding: 35px 16px 35px 35px !important;
+}
+
+.copyright {
+  position: absolute;
+  right: 25px;
+  bottom: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* CSS สำหรับแท็บเล็ต */
+  .footer-temp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .copyright {
+    bottom: 85px;
+  }
+}
+
+/* สำหรับหน้าจอขนาดเล็ก เช่น Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* CSS สำหรับ Laptop */
+  .container-footer {
+    padding: 54px 0px !important;
+  }
+  .footer-temp {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .copyright {
+    left: 8px;
+    position: relative;
+    bottom: 0px !important;
+  }
+  .container-footer {
+  padding: 1rem !important;
+}
+}
+
+/* สำหรับหน้าจอขนาดใหญ่ เช่น Desktop */
+@media (min-width: 1200px) {
+  /* CSS สำหรับ Desktop ขนาดปกติ */
+  .container-footer{
+    padding: 54px 0px !important;
+  }
+  .footer-temp {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .copyright {
+    left: 0px;
+    position: relative !important;
+    bottom: 0px !important;
+  }
+}

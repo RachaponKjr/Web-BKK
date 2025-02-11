@@ -1,0 +1,60 @@
+.input-search{
+    max-width: 309px;
+    height: 45px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #AAAAAA;
+}
+.table{
+    max-width: 100%;
+    background-color: re;
+}
+
+.bannerdowload{
+    background-image: url(../images/bannerdowload.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 20px;
+    height: 285px;
+}
+
+.map-modal{
+    width: 108px;
+    height: 29px;
+    border-radius: 5px;
+    border: 1px solid #03754A;
+}
+
+.head-titel{
+    gap:1rem
+}
+
+/* สำหรับมือถือแนวตั้ง (Portrait) */
+@media (max-width: 575px) {
+  /* CSS สำหรับมือถือเล็ก */
+}
+
+/* สำหรับมือถือแนวนอนหรือมือถือใหญ่ */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* CSS สำหรับมือถือขนาดกลาง */
+}
+
+/* สำหรับแท็บเล็ต */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* CSS สำหรับแท็บเล็ต */
+}
+
+/* สำหรับหน้าจอขนาดเล็ก เช่น Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* CSS สำหรับ Laptop */
+  
+}
+
+/* สำหรับหน้าจอขนาดใหญ่ เช่น Desktop */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  /* CSS สำหรับ Desktop ขนาดปกติ */
+}
+
