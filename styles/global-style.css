@@ -132,3 +132,8 @@ a {
 .gap-7 {
   gap: 28px;
 }
+
+.line-h-1 {
+  border-bottom: 1px solid #dddddd;
+  margin: 10px 0;
+}

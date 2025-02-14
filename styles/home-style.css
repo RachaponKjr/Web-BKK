@@ -1,40 +1,221 @@
-.input-search{
-    max-width: 309px;
-    height: 45px;
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #AAAAAA;
+.input-search {
+  max-width: 309px;
+  height: 45px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #aaaaaa;
 }
-.table{
-    max-width: 100%;
-    background-color: re;
+.input-search input {
+  border: none;
+  outline: none;
 }
-
-.bannerdowload{
-    background-image: url(../images/bannerdowload.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    border-radius: 20px;
-    height: 285px;
+.table {
+  max-width: 100%;
+  /* background-color: re; */
 }
 
-.map-modal{
-    width: 108px;
-    height: 29px;
-    border-radius: 5px;
-    border: 1px solid #03754A;
+.bannerdowload {
+  background-image: url(../images/bannerdowload.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  border-radius: 20px;
+  height: 285px;
 }
 
-.head-titel{
-    gap:1rem
+.map-modal {
+  width: 108px;
+  height: 29px;
+  border-radius: 5px;
+  border: 1px solid #03754a;
+}
+
+.head-titel {
+  gap: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.thead-second {
+  color: #666666;
+  text-align: start;
+}
+th {
+  padding: 10px;
+}
+.thead-first {
+  color: white;
+  font-size: 15px;
+}
+.thead-second th {
+  text-align: start;
+  vertical-align: top;
+  font-size: 15px;
+  font-weight: 600;
+}
+tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+td {
+  padding: 10px 16px;
+  font-size: 15px;
+  vertical-align: top;
+  color: #333333;
+}
+.text-main-content {
+  color: #03754a;
+}
+.text-sub-content {
+  color: #666666;
+}
+.table-style {
+  border: 1px solid #dddddd;
+}
+
+.tag-status {
+  padding: 6px 2px;
+  display: flex;
+  color: #333333;
+  align-items: center;
+  border-radius: 4px;
+  justify-content: center;
+  line-height: 20px;
+  width: 100%;
+}
+.status-vary-good {
+  background-color: #9ceeff;
+}
+.status-good {
+  background-color: #85edb8;
+}
+.status-normal {
+  background-color: #ffe8a9;
+}
+.status-bad {
+  background-color: #ffb98b;
+}
+.status-vary-bad {
+  background-color: #ffbabc;
+}
+
+.head-table-hr {
+  display: flex;
+}
+.phone-banner-img {
+  width: min-content;
+  height: min-content;
+}
+
+/* mobile status */
+.status-mobile-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+}
+.status-mobile-box {
+  border-bottom: 1px solid #ccc;
+  /* border-radius: 5px; */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.table-content-wrapper {
+  border: 1px solid #ccc;
+}
+.toggle-info {
+  background: rgb(3, 117, 74);
+  background: linear-gradient(
+    90deg,
+    rgba(3, 117, 74, 1) 0%,
+    rgba(36, 167, 118, 1) 100%
+  );
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.table-content {
+  width: 100%;
+}
+.status-mobile-list {
+  display: none;
 }
 
 /* สำหรับมือถือแนวตั้ง (Portrait) */
 @media (max-width: 575px) {
   /* CSS สำหรับมือถือเล็ก */
+  .head-table-hr {
+    display: flex;
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .head-main-status {
+    display: flex;
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .status-list {
+    display: grid;
+    gap: 0px !important;
+    text-wrap: wrap;
+    /* width: 100%; */
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: start !important;
+    align-items: start !important;
+    margin: 20px 0;
+    padding: 0;
+  }
+  .status-box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 10px;
+  }
+  .input-search {
+    min-width: 100% !important;
+    margin: 0 !important;
+  }
+  .table-style {
+    display: none;
+  }
+  .status-mobile-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* banner */
+  .phone-banner-img {
+    width: 139px;
+    height: 220px;
+    right: 10px !important;
+  }
+  .info-banner {
+    top: 0px !important;
+    left: 0px !important;
+    padding: 10px 10px;
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+  .box-img-download {
+    top: 0px !important;
+  }
+  .img-download {
+    display: none;
+  }
+  .qrcode-imge {
+    position: absolute;
+    top: -10px;
+    right: 150px;
+  }
+  .text-info-status {
+    text-align: start !important;
+  }
 }
 
 /* สำหรับมือถือแนวนอนหรือมือถือใหญ่ */
@@ -50,11 +231,9 @@
 /* สำหรับหน้าจอขนาดเล็ก เช่น Laptop */
 @media (min-width: 992px) and (max-width: 1199px) {
   /* CSS สำหรับ Laptop */
-  
 }
 
 /* สำหรับหน้าจอขนาดใหญ่ เช่น Desktop */
 @media (min-width: 1200px) and (max-width: 1399px) {
   /* CSS สำหรับ Desktop ขนาดปกติ */
 }
-

@@ -48,10 +48,13 @@
         </div>
       </nav>
       <!-- content ของเว็บไซต์ -->
-      <main style="display: none">
-        <div class="container">
-          <div class="flex-between" style="align-items: center">
-            <div class="flex-center head-titel">
+      <main>
+        <div class="container" style="width: 100%">
+          <div
+            class="flex-between head-main-status"
+            style="align-items: center"
+          >
+            <div class="flex-center head-titel head-table-hr">
               <h1 class="text-header text-color-2 font-medium">
                 ตารางค่าเฉลี่ยย้อนหลัง 24 ชั่วโมง
               </h1>
@@ -65,37 +68,37 @@
                 >
               </div>
             </div>
-            <div class="flex-center" style="gap: 20px">
+            <div class="flex-center status-list" style="gap: 20px">
               <div
-                class="flex-center text-color-2 font-medium text-sm"
+                class="flex-center text-color-2 font-medium text-sm status-box"
                 style="width: 130px; gap: 4px"
               >
                 <img src="/svg/vary-good.svg" alt="bad" />
                 <span>คุณภาพอากาศดีมาก</span>
               </div>
               <div
-                class="flex-center text-color-2 font-medium text-sm"
+                class="flex-center text-color-2 font-medium text-sm status-box"
                 style="width: 130px; gap: 4px"
               >
                 <img src="/svg/good.svg" alt="bad" />
                 <span>คุณภาพอากาศดี</span>
               </div>
               <div
-                class="flex-center text-color-2 font-medium text-sm"
+                class="flex-center text-color-2 font-medium text-sm status-box"
                 style="width: 130px; gap: 4px"
               >
                 <img src="/svg/ok.svg" alt="bad" />
                 <span>คุณภาพอากาศปานกลาง</span>
               </div>
               <div
-                class="flex-center text-color-2 font-medium text-sm"
+                class="flex-center text-color-2 font-medium text-sm status-box"
                 style="width: 130px; gap: 4px"
               >
                 <img src="/svg/bad.svg" alt="bad" />
                 <span>เริ่มมีผลกระทบต่อสุขภาพ</span>
               </div>
               <div
-                class="flex-center text-color-2 font-medium text-sm"
+                class="flex-center text-color-2 font-medium text-sm status-box"
                 style="width: 130px; gap: 4px"
               >
                 <img src="/svg/very-bad.svg" alt="bad" />
@@ -123,48 +126,363 @@
             />
           </div>
           <!-- table เเสดง ข้อมูล -->
-          <table class="table">
-            <thead style="width: 100%">
-              <tr>
-                <th style="width: 393px"></th>
-                <th>ชื่อสถานี</th>
-                <th>ค่าเฉลี่ย PM2.5</th>
-                <th>ค่าเฉลี่ย PM10</th>
-                <th>ค่าเฉลี่ย SO2</th>
-                <th>ค่าเฉลี่ย NO2</th>
-                <th>ค่าเฉลี่ย CO</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <th>วันที่</th>
-                <th>ชื่อสถานี</th>
-                <th>ค่าเฉลี่ย PM2.5</th>
-                <th>ค่าเฉลี่ย PM10</th>
-                <th>ค่าเฉลี่ย SO2</th>
-                <th>ค่าเฉลี่ย NO2</th>
-                <th>ค่าเฉลี่ย CO</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>01/01/2023</td>
-                <td>สถานี 1</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-            </tbody>
-          </table>
+          <div>
+            <table class="table-style" style="width: 100%">
+              <thead
+                class="thead-first"
+                style="height: 50px; background: #03754a"
+              >
+                <tr>
+                  <th></th>
+                  <th>ค่ามาตรฐาน</th>
+                  <th>120</th>
+                  <th>37.5</th>
+                  <th>9</th>
+                  <th>170</th>
+                  <th>70</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <thead class="thead-second" style="background: #dedede">
+                <tr>
+                  <th><span>ที่ตั้งสถานี</span></th>
+                  <th><span>ข้อมูลล่าสุด</span></th>
+                  <th>
+                    <span>PM10 (g/m³)<br />(avg 24 hr)</span>
+                  </th>
+                  <th>
+                    <span>PM2.5 (µg/m³)<br />(avg 24 hr)</span>
+                  </th>
+                  <th>
+                    <span>CO (ppm)<br />(avg 8 hr)</span>
+                  </th>
+                  <th>
+                    <span>NO2 (ppb)<br />(avg 1 hr)</span>
+                  </th>
+                  <th>
+                    <span>O3 (ppb)<br />(avg 8 hr</span>)
+                  </th>
+                  <th><span>คุณภาพอากาศ</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="text-main-content">1. เขตคลองเตย </span>:
+                    พื้นที่ทั่วไป<br /><span class="text-sub-content"
+                      >ภายในสำนักงานเขตคลองเตย</span
+                    >
+                  </td>
+                  <td>21 ต.ค. 2567 20:00</td>
+                  <td>-</td>
+                  <td>24.9</td>
+                  <td>-</td>
+                  <td>32</td>
+                  <td>9</td>
+                  <td style="position: relative">
+                    <span class="tag-status status-vary-good">
+                      อากาศดีมาก
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="text-main-content">2. เขตคลองสาน </span>:
+                    ริมถนน<br /><span class="text-sub-content"
+                      >บริเวณหน้าห้องสมุดใต้สะพานสมเด็จพระเจ้าตากสิน</span
+                    >
+                  </td>
+                  <td>21 ต.ค. 2567 20:00</td>
+                  <td>-</td>
+                  <td>21.8</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td style="position: relative">
+                    <span class="tag-status status-good"> อากาศดี </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="text-main-content">3. เขตคลองสามวา </span>:
+                    พื้นที่ทั่วไป<br /><span class="text-sub-content"
+                      >ภายในสำนักงานเขตคลองสามวา</span
+                    >
+                  </td>
+                  <td>21 ต.ค. 2567 20:00</td>
+                  <td>53</td>
+                  <td>26.8</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td style="position: relative">
+                    <span class="tag-status status-normal"> อากาศปานกลาง </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="text-main-content">4. เขตคันนายาว </span>:
+                    พื้นที่ทั่วไป<br /><span class="text-sub-content"
+                      >บริเวณปากทางถนนสวนสยามตัดกับถนนรามอินทรา</span
+                    >
+                  </td>
+                  <td>21 ต.ค. 2567 20:00</td>
+                  <td>44</td>
+                  <td>23.1</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td style="position: relative">
+                    <span class="tag-status status-bad"> เริ่มมีผลกระทบ </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="text-main-content">5. เขตจตุจักร </span>:
+                    ริมถนน<br /><span class="text-sub-content"
+                      >บริเวณด้านหน้ามหาวิทยาลัยเกษตรศาสตร์</span
+                    >
+                  </td>
+                  <td>21 ต.ค. 2567 20:00</td>
+                  <td>-</td>
+                  <td>16.2</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td style="position: relative">
+                    <span class="tag-status status-vary-bad">
+                      มีผลกระทบต่อสุขภาพ
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Mobile status -->
+            <div class="status-mobile-list" style="margin-top: 20px">
+              <div class="status-mobile-box">
+                <div class="flex flex-column">
+                  <div class="toggle-info">
+                    <h6 class="text-md medium">
+                      1. เขตคลองเตย : พื้นที่ทั่วไป
+                    </h6>
+                    <span style="color: #a0f0d2">ภายในสำนักงานเขตคลองเตย</span>
+                  </div>
+                  <!-- line -->
+                  <div class="line-h-1"></div>
+                  <!-- status & click open  -->
+                  <div
+                    class="flex flex-between gap-4 status-mobile-click"
+                    date="21 ต.ค. 2567 20:00"
+                    pm10="-"
+                    pm25="24.9"
+                    co="-"
+                    no2="32"
+                    o3="9"
+                    style="margin: 16px 0"
+                  >
+                    <span
+                      class="text-color-2 semi-bold"
+                      style="text-wrap: nowrap"
+                      >คุณภาพอากาศ</span
+                    >
+                    <span class="tag-status status-vary-good">
+                      อากาศดีมาก
+                    </span>
+                    <img
+                      src="/svg/open.svg"
+                      alt=""
+                      class="toggle-info-btn"
+                      style="margin: 0 10px"
+                    />
+                  </div>
+                </div>
+                <!-- content -->
+                <div class="content" style="border-radius: 5px"></div>
+              </div>
+
+              <div class="status-mobile-box">
+                <div class="flex flex-column">
+                  <div class="toggle-info">
+                    <h6 class="text-md medium">2. เขตคลองสาน : ริมถนน</h6>
+                    <span style="color: #a0f0d2"
+                      >บริเวณหน้าห้องสมุดใต้สะพานสมเด็จพระเจ้าตากสิน</span
+                    >
+                  </div>
+                  <!-- line -->
+                  <div class="line-h-1"></div>
+                  <!-- status & click open  -->
+                  <div
+                    class="flex flex-between gap-4 status-mobile-click"
+                    date="21 ต.ค. 2567 20:00"
+                    pm10="-"
+                    pm25="21.8"
+                    co="-"
+                    no2="-"
+                    o3=""
+                    style="margin: 16px 0"
+                  >
+                    <span
+                      class="text-color-2 semi-bold"
+                      style="text-wrap: nowrap"
+                      >คุณภาพอากาศ</span
+                    >
+                    <span class="tag-status status-good"> อากาศดี </span>
+                    <img
+                      src="/svg/open.svg"
+                      alt=""
+                      class="toggle-info-btn"
+                      style="margin: 0 10px"
+                    />
+                  </div>
+                </div>
+                <!-- content -->
+                <div class="content" style="border-radius: 5px"></div>
+              </div>
+
+              <div class="status-mobile-box">
+                <div class="flex flex-column">
+                  <div class="toggle-info">
+                    <h6 class="text-md medium">
+                      3. เขตคลองสามวา : พื้นที่ทั่วไป
+                    </h6>
+                    <span style="color: #a0f0d2"
+                      >ภายในสำนักงานเขตคลองสามวา</span
+                    >
+                  </div>
+                  <!-- line -->
+                  <div class="line-h-1"></div>
+                  <!-- status & click open  -->
+                  <div
+                    class="flex flex-between gap-4 status-mobile-click"
+                    date="21 ต.ค. 2567 20:00"
+                    pm10="53"
+                    pm25="26.8"
+                    co="-"
+                    no2="-"
+                    o3="-"
+                    style="margin: 16px 0"
+                  >
+                    <span
+                      class="text-color-2 semi-bold"
+                      style="text-wrap: nowrap"
+                      >คุณภาพอากาศ</span
+                    >
+                    <span class="tag-status status-normal"> อากาศปานกลาง </span>
+                    <img
+                      src="/svg/open.svg"
+                      alt=""
+                      class="toggle-info-btn"
+                      style="margin: 0 10px"
+                    />
+                  </div>
+                </div>
+                <!-- content -->
+                <div class="content" style="border-radius: 5px"></div>
+              </div>
+
+              <div
+                class="status-mobile-box"
+                style="margin-bottom: 0px; border-bottom: none"
+              >
+                <div class="flex flex-column">
+                  <div class="toggle-info">
+                    <h6 class="text-md medium">
+                      4. เขตคันนายาว : พื้นที่ทั่วไป
+                    </h6>
+                    <span style="color: #a0f0d2"
+                      >บริเวณปากทางถนนสวนสยามตัดกับถนนรามอินทรา</span
+                    >
+                  </div>
+                  <!-- line -->
+                  <div class="line-h-1"></div>
+                  <!-- status & click open  -->
+                  <div
+                    class="flex flex-between gap-4 status-mobile-click"
+                    date="21 ต.ค. 2567 20:00"
+                    pm10="44"
+                    pm25="23.1"
+                    co="-"
+                    no2="-"
+                    o3="-"
+                    style="margin: 16px 0"
+                  >
+                    <span
+                      class="text-color-2 semi-bold"
+                      style="text-wrap: nowrap"
+                      >คุณภาพอากาศ</span
+                    >
+                    <span class="tag-status status-bad"> เริ่มมีผลกระทบ </span>
+                    <img
+                      src="/svg/open.svg"
+                      alt=""
+                      class="toggle-info-btn"
+                      style="margin: 0 10px"
+                    />
+                  </div>
+                </div>
+                <!-- content -->
+                <div class="content" style="border-radius: 5px"></div>
+              </div>
+
+              <div
+                class="status-mobile-box"
+                style="margin-bottom: 0px; border-bottom: none"
+              >
+                <div class="flex flex-column">
+                  <div class="toggle-info">
+                    <h6 class="text-md medium">5. เขตจตุจักร : ริมถนน</h6>
+                    <span style="color: #a0f0d2"
+                      >บริเวณด้านหน้ามหาวิทยาลัยเกษตรศาสตร์</span
+                    >
+                  </div>
+                  <!-- line -->
+                  <div class="line-h-1"></div>
+                  <!-- status & click open  -->
+                  <div
+                    class="flex flex-between gap-4 status-mobile-click"
+                    date="21 ต.ค. 2567 20:00"
+                    pm10="-"
+                    pm25="16.2"
+                    co="-"
+                    no2="-"
+                    o3="-"
+                    style="margin: 16px 0"
+                  >
+                    <span
+                      class="text-color-2 semi-bold"
+                      style="text-wrap: nowrap"
+                      >คุณภาพอากาศ</span
+                    >
+                    <span class="tag-status status-vary-bad">
+                      มีผลกระทบต่อสุขภาพ
+                    </span>
+                    <img
+                      src="/svg/open.svg"
+                      alt=""
+                      class="toggle-info-btn"
+                      style="margin: 0 10px"
+                    />
+                  </div>
+                </div>
+                <!-- content -->
+                <div class="content" style="border-radius: 5px"></div>
+              </div>
+            </div>
+            <span
+              class="text-color-2 text-sm text-info-status"
+              style="display: block; margin-top: 20px; text-align: center"
+              >* ข้อมูลที่แสดงเป็นข้อมูลที่ผ่านการตรวจสอบเบื้องต้นเท่านั้น
+              หากมีข้อคำถามและข้อเสนอแนะ กรุณาติดต่อกองจัดการคุณภาพอากาศและเสียง
+              สำนักสิ่งแวดล้อม กรุงเทพมหานคร</span
+            >
+          </div>
           <!-- banner -->
           <div
             class="bannerdowload"
-            style="position: relative; margin: 100px 0"
+            style="position: relative; margin: 100px 0; width: 100%"
           >
             <div
-              class="flex"
+              class="flex info-banner"
               style="
                 align-items: end;
                 gap: 40px;
@@ -174,7 +492,7 @@
                 top: 50px;
               "
             >
-              <div class="flex-column" style="gap: 4px">
+              <div class="flex-column" style="gap: 4px; width: 100%">
                 <h3 class="text-color-main semi-bold text-2xl">ดาวน์โหลดแอป</h3>
                 <span class="text-lg text-color-2"
                   >ตรวจสอบสภาพอากาศรอบตัวคุณง่ายๆ ได้แล้วกับแอป
@@ -182,7 +500,7 @@
                 >
               </div>
               <div
-                class="flex"
+                class="flex box-img-download"
                 style="
                   align-items: center;
                   gap: 30px;
@@ -190,16 +508,24 @@
                   top: 20px;
                 "
               >
-                <div class="flex-column" style="gap: 4px; justify-content: end">
+                <div
+                  class="flex-column img-download"
+                  style="gap: 4px; justify-content: end"
+                >
                   <img src="/images/googlePlay.png" alt="googlePlay" />
                   <img src="/images/appStore.png" alt="appStore" />
                 </div>
-                <img src="/images/qrcode.png" alt="qrcode" />
+                <img
+                  src="/images/qrcode.png"
+                  alt="qrcode"
+                  class="qrcode-imge"
+                />
               </div>
             </div>
             <img
               src="/images/mobile-banner.png"
               alt="phone"
+              class="phone-banner-img"
               style="position: absolute; bottom: -10px; right: 106px"
             />
           </div>
@@ -278,5 +604,6 @@
         </div>
       </footer>
     </div>
+    <script src="../scripts/status.js"></script>
   </body>
 </html>
