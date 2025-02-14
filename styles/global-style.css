@@ -132,3 +132,7 @@ a {
 .gap-7 {
   gap: 28px;
 }
+
+.dice-none {
+  list-style: none;
+}

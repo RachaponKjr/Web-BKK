@@ -1,0 +1,14 @@
+.border1 {
+    margin-left: 0px; 
+    padding-left: 0px;
+    border-bottom: 2px solid #CCCCCC;
+    padding-bottom: 30px; 
+    justify-content: space-between;
+}
+li {
+    /* margin-top: 16px; */
+    margin-left: 16px;
+}
+.lihead{
+    margin-top: 16px;
+}
