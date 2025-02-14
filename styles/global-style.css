@@ -133,12 +133,10 @@ a {
   gap: 28px;
 }
 
-<<<<<<< HEAD
 .line-h-1 {
   border-bottom: 1px solid #dddddd;
   margin: 10px 0;
-=======
+}
 .dice-none {
   list-style: none;
->>>>>>> ec1dc0a61969b33e99bb9895304a517981233da8
 }
