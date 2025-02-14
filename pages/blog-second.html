@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global-style.css" />
+    <link rel="stylesheet" href="../styles/navbar-style.css" />
+    <link rel="stylesheet" href="../styles/footer-style.css" />
+    <link rel="stylesheet" href="../styles/blog-second.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-image-bkk" style="height: min-content">
+        <!-- Navbar -->
+        <nav class="container flex-between gap-7 navbar">
+            <img src="../images/icon.png" alt="logo" />
+            <div class="navbar-menu">
+                <ul class="list-style flex-between text-navbar gap-6">
+                    <li><a active href="#">แผนที่แสดงคุณภาพอากาศ</a></li>
+                    <li><a href="#">ดัชนีคุณภาพอากาศ</a></li>
+                    <li><a href="#">รายงาน v</a></li>
+                    <li><a href="#">ระบบระบายมลพิษทางอากาศ</a></li>
+                    <li><a href="#">ข่าวสารประชาสัมพันธ์</a></li>
+                    <li><a href="#">แจ้งข่าวสาร</a></li>
+                    <li><a href="#">แจ้งข่าวสาร</a></li>
+                </ul>
+            </div>
+            <!-- ปุ่มเปลี่ยนภาษา -->
+            <div class="toggle-lang flex-center" style="cursor: pointer">
+                <img src="/svg/thailand.svg" alt="thailand" />
+            </div>
+            <!-- hamburger menu -->
+            <div class="hamburger-menu" style="cursor: pointer; height: 32px">
+                <img src="/svg/hamburger-menu.svg" alt style="width: 24px" />
+            </div>
+        </nav>
+        <!-- main pages -->
+        <main style="margin-bottom: 50px;">
+            <div class="container " style=" width: 876px; height: 74;">
+                <div class="text-2xl text-color-2 medium" style="margin-bottom: 25px;">
+                    <p>ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร<br>ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน
+                        2.5 ไมครอน (PM 2.5) ในกรุงเทพมหานคร<br>ประจำวันที่
+                        22 ตุลาคม 2567 เวลา 07:00 น.</p>
+                </div>
+                <div class="text-lg text-color-2 flex"
+                    style="border-top: 2px solid #CCCCCC; padding: 30px 0px; justify-content: space-between;">
+                    <span>วันอังคารที่ 22 ตุลาคม พ.ศ. 2567 เวลา 00:00
+                        น</span>
+                    <div class="flex gap-7">
+                        <span>เเชร์บทความ</span>
+                        <ul class="dice-none flex gap-6">
+                            <li><a href="#"><img src="/svg/line.svg" alt="line"></a></li>
+                            <li><a href="#"><img src="/svg/fb.svg" alt="facebook"></a></li>
+                            <li><a href="#"><img src="/svg/x.svg" alt="x"></a></li>
+                            <li><a href="#"><img src="/svg/link.svg" alt="link"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- main picture -->
+                <div class="flex-column gap-7">
+                    <div style="width: 876px; aspect-ratio: 1/1;">
+                        <img src="/images/pm25.jpg" alt="main-picture">
+                    </div>
+                    <div class="text-2xl text-color-m">
+                        <span>ค่าเฉลี่ยของกรุงเทพมหานคร 20.3 ไมโครกรัมต่อลูกบาศก์เมตร (มคก./ลบ.ม.)</span>
+                    </div>
+                    <!-- sec1 -->
+                    <div class="flex-column gap-4 text-color-m ">
+                        <div class="medium text-2xl">
+                            <span>5 อันดับ ของค่าฝุ่นPM2.5 เขตสูงสุดในกรุงเทพมหานคร</span>
+                        </div>
+                        <div class="text-xl border1" style="list-style-position: inside;">
+                            <ol class="flex-column gap-4">
+                                <li>เขตบางนา 29.6 มคก./ลบ.ม.</li>
+                                <li>เขตบางกอกใหญ่ 27.9 มคก./ลบ.ม.</li>
+                                <li>เขตวังทองหลาง 27.3 มคก./ลบ.ม.</li>
+                                <li>เขตประเวศ 27.3 มคก./ลบ.ม.</li>
+                                <li>เขตป้อมปราบศัตรูพ่าย 26.1 มคก./ลบ.ม.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- sec2 -->
+                    <div class="flex-column gap-4 text-color-m">
+                        <div class="text-xl" style="list-style-position: inside; margin-left: 15px;">
+                            <ol type="1" class="flex-column gap-7">
+                                <li class=" medium text-2xl border1">กรุงเทพเหนือ
+                                    <ol class="regular text-xl dice-none  gap-2 ">
+                                        <li class=" lihead">13.8 - 22.9 มคก./ลบ.ม.</li>
+                                        <li>ภาพรวม : อยู่ในเกณฑ์ดี</li>
+                                    </ol>
+                                </li>
+                                <li class=" medium text-2xl border1">กรุงเทพตะวันออก
+                                    <ol class="regular text-xl dice-none  gap-2 ">
+                                        <li class=" lihead">18.6 - 27.3 มคก./ลบ.ม.</li>
+                                        <li>ภาพรวม : อยู่ในเกณฑ์ดี</li>
+                                    </ol>
+                                </li>
+                                <li class=" medium text-2xl border1">กรุงเทพกลาง
+                                    <ol class="regular text-xl dice-none  gap-2 ">
+                                        <li class=" lihead">14.8 - 27.3 มคก./ลบ.ม.</li>
+                                        <li>ภาพรวม : อยู่ในเกณฑ์ดี</li>
+                                    </ol>
+                                </li>
+                                <li class=" medium text-2xl border1">กรุงเทพใต้
+                                    <ol class="regular text-xl dice-none  gap-2 ">
+                                        <li class=" lihead">16.7 - 29.6 มคก./ลบ.ม.</li>
+                                        <li>ภาพรวม : อยู่ในเกณฑ์ดี</li>
+                                    </ol>
+                                </li>
+                                <li class=" medium text-2xl border1">กรุงเทพเหนือ
+                                    <ol class="regular text-xl dice-none  gap-2 ">
+                                        <li class=" lihead">15.3 - 27.9 มคก./ลบ.ม.</li>
+                                        <li>ภาพรวม : อยู่ในเกณฑ์ดี</li>
+                                    </ol>
+                                </li>
+                                <li class=" medium text-2xl border1">กรุงธนใต้
+                                    <ol class="regular text-xl dice-none  gap-2 ">
+                                        <li class=" lihead">16.1 - 25.1 มคก./ลบ.ม.</li>
+                                        <li>ภาพรวม : อยู่ในเกณฑ์ดี</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- sec3 -->
+                    <div class=" text-xl text-color-m border1">
+                        <span>ฝุ่นละอองมีแนวโน้มเพิ่มขึ้น <br>
+                            ภาพรวมอยู่ในเกณฑ์คุณภาพอากาศดี</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer class="bg-footer">
+            <div class="container container-footer" style="padding: 50px 0px; position: relative">
+                <div class="footer-temp">
+                    <div style="gap: 20px; display: flex; flex-direction: column">
+                        <img src="/images/icon.png" alt="logo" style="width: 159px" />
+                        <div style="line-height: 20px">
+                            <h4 class="t-footer-h">สำนักสิ่งแวดล้อม</h4>
+                            <span class="text-color-2 text-sm">
+                                ศาลาว่าการกรุงเทพ(ดินแดง) <br />ถนนมิตรไมตรี เขตดินแดง กทม.
+                                10400</span>
+                        </div>
+                    </div>
+                    <div class="flex-column" style="gap: 25px">
+                        <h4 class="t-footer-h">ติดต่อเรา</h4>
+                        <div class="flex-column t-footer-contact" style="gap: 10px">
+                            <div class="flex gap-4">
+                                <img src="/svg/facebook.svg" alt="facebook" />
+                                <span>สำนักสิ่งแวดล้อม</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="/svg/facebook.svg" alt="facebook" />
+                                <span>กองจัดการคุณภาพอากาศและเสียง</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="/svg/facebook.svg" alt="facebook" />
+                                <span>กรุงเทพมหานคร</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-column" style="gap: 25px">
+                        <h4 class="t-footer-h">ลิงก์ที่เกี่ยวข้อง</h4>
+                        <div class="t-footer-s">
+                            <span>Air BKK</span>
+                            <span>SENSOR FOR ALL</span>
+                            <span>Windy</span>
+                            <span>Emission Inventory</span>
+                            <span>NASA Hotspot </span>
+                            <span>อัตราการระบายอากาศ</span>
+                            <span>Air4Thai</span>
+                            <span>สำหรับเจ้าหน้าที่</span>
+                        </div>
+                    </div>
+                    <div class="flex-column" style="gap: 40px">
+                        <div class="flex-column" style="gap: 10px">
+                            <h4 class="t-footer-h">
+                                กองจัดการคุณภาพอากาศและเสียงกรุงเทพมหานคร
+                            </h4>
+                            <div class="flex gap-2">
+                                <img src="/svg/phone.svg" alt="phone" />
+                                <span class="text-color-main">0-2203-2954</span>
+                            </div>
+                        </div>
+                        <div class="flex-column" style="gap: 4px">
+                            <h4 class="t-footer-s">จำนวนผู้เข้าใช้งาน</h4>
+                            <span class="text-color-main semi-bold">661547</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-column text-xs text-color-2 copyright" style="gap: 4px">
+                    <span>© 2024 Bangkok Air Quality, </span>
+                    <span>ALL RIGHT RESERVED</span>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
