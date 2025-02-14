@@ -147,11 +147,58 @@ td {
   display: none;
 }
 
+/* กำหนดสไตล์ให้ dialog */
+.map-dialog {
+  width: 80%;
+  max-width: 1200px;
+  min-height: 600px;
+  padding: 20px;
+  border-radius: 20px;
+  place-self: center;
+  border: none;
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 600px;
+  align-items: center;
+}
+
+.close-btn {
+  background-color: white;
+  display: grid;
+  place-content: center;
+  color: #333333;
+  border: 2px solid rgb(102, 102, 102, 0.2);
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+/* สไตล์ให้ปุ่มเปิดดูแผนที่ */
+.map-modal {
+  cursor: pointer;
+}
+
+.map-modal:hover {
+  background-color: #c5e7e2;
+}
+
+.head-dialog {
+  align-items: center;
+}
+
 /* สำหรับมือถือแนวตั้ง (Portrait) */
 @media (max-width: 575px) {
   /* CSS สำหรับมือถือเล็ก */
   .head-table-hr {
     display: flex;
+    margin-top: 16px;
     flex-direction: column;
     align-items: start !important;
   }
@@ -215,6 +262,32 @@ td {
   }
   .text-info-status {
     text-align: start !important;
+  }
+  .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  .head-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+  .select-style {
+    flex-direction: column;
+    width: 100% !important;
+    height: min-content !important;
+  }
+  .input-mobile {
+    height: 2.5rem;
+    padding: 0px 6px;
+  }
+  .head-text-dialog h3 {
+    font-size: 20px !important;
+  }
+  .head-text-dialog span {
+    font-size: 16px !important;
   }
 }
 

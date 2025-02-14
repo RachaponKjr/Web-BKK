@@ -133,12 +133,78 @@ a {
   gap: 28px;
 }
 
-<<<<<<< HEAD
 .line-h-1 {
   border-bottom: 1px solid #dddddd;
   margin: 10px 0;
-=======
+}
 .dice-none {
   list-style: none;
->>>>>>> ec1dc0a61969b33e99bb9895304a517981233da8
+}
+
+.status-o {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  background: white;
+}
+
+.status-blue {
+  background-color: #3ccbe9;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+}
+
+.status-b-blue {
+  border: 2px solid #3ccbe9;
+}
+
+.status-green {
+  background-color: #47dd91;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+}
+
+.status-b-green {
+  border: 2px solid #47dd91;
+}
+
+.status-yellow {
+  background-color: #ffd359;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+}
+
+.status-b-yellow {
+  border: 2px solid #ffd359;
+}
+.status-or {
+  background-color: #ffb98b;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+}
+
+.status-b-or {
+  border: 2px solid #ffb98b;
+}
+.status-red {
+  background-color: #ffbabc;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+}
+
+.status-b-red {
+  border: 2px solid #ffbabc;
+}
+
+.input-style {
+  height: 100%;
+  flex-grow: 1;
+  border: 1px solid #AAAAAA;
 }
