@@ -9,7 +9,6 @@
 
 
 main {
-  
   .header-text {
     margin: 30px 0 30px 0;
     font-size: 24px;
@@ -85,6 +84,7 @@ main {
       display: none;
     }
     .small {
+      color: #999999;
       display: block;
 
     }
