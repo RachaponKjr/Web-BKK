@@ -115,6 +115,9 @@ a {
 .text-color-2 {
   color: #666666;
 }
+.text-color-3 {
+  color: #999999;
+}
 .text-color-main {
   color: #03754a;
 }
@@ -206,5 +209,5 @@ a {
 .input-style {
   height: 100%;
   flex-grow: 1;
-  border: 1px solid #AAAAAA;
+  border: 1px solid #aaaaaa;
 }

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global-style.css" />
+    <link rel="stylesheet" href="../styles/navbar-style.css" />
+    <link rel="stylesheet" href="../styles/footer-style.css" />
+    <link rel="stylesheet" href="../styles/list-blog.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-image-bkk" style="height: min-content">
+      <!-- Navbar -->
+      <nav class="container flex-between gap-7 navbar">
+        <img src="../images/icon.png" alt="logo" />
+        <div class="navbar-menu">
+          <ul class="list-style flex-between text-navbar gap-6">
+            <li><a active href="#">แผนที่แสดงคุณภาพอากาศ</a></li>
+            <li><a href="#">ดัชนีคุณภาพอากาศ</a></li>
+            <li><a href="#">รายงาน v</a></li>
+            <li><a href="#">ระบบระบายมลพิษทางอากาศ</a></li>
+            <li><a href="#">ข่าวสารประชาสัมพันธ์</a></li>
+            <li><a href="#">แจ้งข่าวสาร</a></li>
+            <li><a href="#">แจ้งข่าวสาร</a></li>
+          </ul>
+        </div>
+        <!-- ปุ่มเปลี่ยนภาษา -->
+        <div class="toggle-lang flex-center" style="cursor: pointer">
+          <img src="/svg/thailand.svg" alt="thailand" />
+        </div>
+        <!-- hamburger menu -->
+        <div class="hamburger-menu" style="cursor: pointer; height: 32px">
+          <img src="/svg/hamburger-menu.svg" alt="" style="width: 24px" />
+        </div>
+      </nav>
+      <!-- Main -->
+      <main class="container">
+        <!-- ส่วนหัวของ list blog -->
+        <div
+          class="flex-between head-menu"
+          style="height: 4rem; border-bottom: 1px solid #cccccc"
+        >
+          <h2 class="text-2xl font-medium text-color-2">
+            ข่าวสารและประชาสัมพันธ์
+          </h2>
+          <ul class="list-style flex-center gap-4 text-color-3 catagory-list">
+            <li active>ข่าวทั้งหมด</li>
+            <li>ข่าวอื่นๆ</li>
+            <li>ติดตามคุณภาพอากาศประจำวัน</li>
+            <li>ข่าวประชาสัมพันธ์</li>
+          </ul>
+        </div>
+
+        <div
+          class="blog-p"
+          style="
+            margin: 30px 0px;
+            display: flex;
+            max-width: 1030px;
+            margin: 30px auto;
+            flex-direction: column;
+            gap: 30px;
+          "
+        >
+          <div class="head-blog">
+            <div class="main-blog" style="height: 364px; display: flex">
+              <img
+                src="../images/blog1.png"
+                alt=""
+                style="max-width: 100%; aspect-ratio: 1/1; flex-grow: 1"
+              />
+              <div
+                class="flex-between flex-column info-text"
+                style="
+                  padding: 30px;
+                  min-width: 364px;
+                  aspect-ratio: 1/1;
+                  align-items: start;
+                "
+              >
+                <p class="text-xl text-color-m">
+                  #สำนักสิ่งแวดล้อม กทม.
+                  ร่วมแลกเปลี่ยนการขับเคลื่อนเมืองคาร์บอนต่ำในการประชุม 13th
+                  Asia Smart Cities Conference (ASCC) ณ เมืองโยโกฮามา
+                  ประเทศญี่ปุ่น
+                </p>
+                <span class="text-lg text-color-2">25 ตุลาคม 2567</span>
+              </div>
+            </div>
+          </div>
+          <div class="sub-blog">
+            <div class="blog" style="width: 100%; aspect-ratio: 1/1">
+              <img src="../images/blog2.png" alt="" style="width: 100%" />
+              <div
+                class="flex-between flex-column info-text"
+                style="padding: 20px 30px; align-items: start; flex-grow: 1"
+              >
+                <p class="text-lg text-color-m">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 25 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span class="text-lg text-color-2">25 ตุลาคม 2567</span>
+              </div>
+            </div>
+            <div class="blog" style="width: 100%; aspect-ratio: 1/1">
+              <img src="../images/blog3.png" alt="" style="width: 100%" />
+              <div
+                class="flex-between flex-column info-text"
+                style="padding: 20px 30px; align-items: start; flex-grow: 1"
+              >
+                <p class="text-lg text-color-m">
+                  🍃ภารกิจช่วยเหลือ #เชียงราย ❤️ ทีม กทม. และ พี่ ๆ
+                  #สำนักสิ่งแวดล้อม เริ่มงานกันตั้งแต่เช้า กับปฏิบัติการฉีดน้ำ
+                  ดูดเลนดินโคลนออกจากท่อระบาย ล้างทำความสะอาด ที่ชุมชนไม้ลุงขน
+                  อำเภอแม่สาย จังหวัดเชียงราย
+                </p>
+                <span class="text-lg text-color-2">25 ตุลาคม 2567</span>
+              </div>
+            </div>
+          </div>
+          <div class="list-blogs">
+            <div class="blog" style="width: 100%">
+              <img src="../images/pm1.png" alt="" style="width: 100%" />
+              <div
+                class="flex-between flex-column"
+                style="padding: 20px 30px; align-items: start; flex-grow: 1"
+              >
+                <p class="text-md text-color-m">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 24 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span class="text-lg text-color-2">3 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div class="blog" style="width: 100%">
+              <img src="../images/pm2.png" alt="" style="width: 100%" />
+              <div
+                class="flex-between flex-column"
+                style="padding: 20px 30px; align-items: start; flex-grow: 1"
+              >
+                <p class="text-md text-color-m">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 23 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span class="text-lg text-color-2">4 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div class="blog" style="width: 100%">
+              <img src="../images/pm3.png" alt="" style="width: 100%" />
+              <div
+                class="flex-between flex-column"
+                style="padding: 20px 30px; align-items: start; flex-grow: 1"
+              >
+                <p class="text-md text-color-m">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 22 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span class="text-lg text-color-2">5 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div class="blog" style="width: 100%">
+              <img src="../images/pm4.png" alt="" style="width: 100%" />
+              <div
+                class="flex-between flex-column"
+                style="padding: 20px 30px; align-items: start; flex-grow: 1"
+              >
+                <p class="text-md text-color-m">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 21 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span class="text-lg text-color-2">6 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div class="blog" style="width: 100%">
+              <img src="../images/pm5.png" alt="" style="width: 100%" />
+              <div
+                class="flex-between flex-column"
+                style="padding: 20px 30px; align-items: start; flex-grow: 1"
+              >
+                <p class="text-md text-color-m">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 20 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span class="text-lg text-color-2">7 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div class="blog" style="width: 100%">
+              <img src="../images/pm6.png" alt="" style="width: 100%" />
+              <div
+                class="flex-between flex-column"
+                style="padding: 20px 30px; align-items: start; flex-grow: 1"
+              >
+                <p class="text-md text-color-m">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 19 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span class="text-lg text-color-2">25 ตุลาคม 2567</span>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile list blogs -->
+          <div class="mobile-blog">
+            <div
+              class="mobile-sub-blog flex"
+              style="
+                padding: 20px 0px;
+                gap: 20px;
+                align-items: center;
+                border-bottom: 1px solid #cccccc;
+              "
+            >
+              <!-- รูปภาพ -->
+              <img
+                src="../images/pm1.png"
+                alt=""
+                style="height: 95px; aspect-ratio: 1/1; border-radius: 10px"
+              />
+              <div
+                class="flex-between flex-column mobile-blog-info"
+                style="align-items: start; gap: 10px"
+              >
+                <p style="line-clamp: 2">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 24 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span>3 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div
+              class="mobile-sub-blog flex"
+              style="
+                padding: 20px 0px;
+                gap: 20px;
+                align-items: center;
+                border-bottom: 1px solid #cccccc;
+              "
+            >
+              <!-- รูปภาพ -->
+              <img
+                src="../images/pm2.png"
+                alt=""
+                style="height: 95px; aspect-ratio: 1/1; border-radius: 10px"
+              />
+              <div
+                class="flex-between flex-column mobile-blog-info"
+                style="align-items: start; gap: 10px"
+              >
+                <p style="line-clamp: 2">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 23 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span>4 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div
+              class="mobile-sub-blog flex"
+              style="
+                padding: 20px 0px;
+                gap: 20px;
+                align-items: center;
+                border-bottom: 1px solid #cccccc;
+              "
+            >
+              <!-- รูปภาพ -->
+              <img
+                src="../images/pm3.png"
+                alt=""
+                style="height: 95px; aspect-ratio: 1/1; border-radius: 10px"
+              />
+              <div
+                class="flex-between flex-column mobile-blog-info"
+                style="align-items: start; gap: 10px"
+              >
+                <p style="line-clamp: 2">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 22 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span>5 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div
+              class="mobile-sub-blog flex"
+              style="
+                padding: 20px 0px;
+                gap: 20px;
+                align-items: center;
+                border-bottom: 1px solid #cccccc;
+              "
+            >
+              <!-- รูปภาพ -->
+              <img
+                src="../images/pm4.png"
+                alt=""
+                style="height: 95px; aspect-ratio: 1/1; border-radius: 10px"
+              />
+              <div
+                class="flex-between flex-column mobile-blog-info"
+                style="align-items: start; gap: 10px"
+              >
+                <p style="line-clamp: 2">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 21 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span>6 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div
+              class="mobile-sub-blog flex"
+              style="
+                padding: 20px 0px;
+                gap: 20px;
+                align-items: center;
+                border-bottom: 1px solid #cccccc;
+              "
+            >
+              <!-- รูปภาพ -->
+              <img
+                src="../images/pm5.png"
+                alt=""
+                style="height: 95px; aspect-ratio: 1/1; border-radius: 10px"
+              />
+              <div
+                class="flex-between flex-column mobile-blog-info"
+                style="align-items: start; gap: 10px"
+              >
+                <p style="line-clamp: 2">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 20 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span>7 วันที่แล้ว</span>
+              </div>
+            </div>
+            <div
+              class="mobile-sub-blog flex"
+              style="
+                padding: 20px 0px;
+                gap: 20px;
+                align-items: center;
+                border-bottom: 1px solid #cccccc;
+              "
+            >
+              <!-- รูปภาพ -->
+              <img
+                src="../images/pm6.png"
+                alt=""
+                style="height: 95px; aspect-ratio: 1/1; border-radius: 10px"
+              />
+              <div
+                class="flex-between flex-column mobile-blog-info"
+                style="align-items: start; gap: 10px"
+              >
+                <p style="line-clamp: 2">
+                  ศูนย์ข้อมูลคุณภาพอากาศกรุงเทพมหานคร
+                  ขอรายงานสถานการณ์ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM 2.5)
+                  ในกรุงเทพมหานคร ประจำวันที่ 19 ตุลาคม 2567 เวลา 07:00 น.
+                </p>
+                <span>8 วันที่แล้ว</span>
+              </div>
+            </div>
+          </div>
+          <!-- BTN -->
+          <button
+            class="flex text-lg text-color-main btn-more"
+            style="width: max-content; padding: 10px 26px"
+          >
+            เเสดงข้อมูลเพิ่มเติม
+          </button>
+        </div>
+      </main>
+      <!-- footer -->
+      <footer class="bg-footer">
+        <div
+          class="container container-footer"
+          style="padding: 50px 0px; position: relative"
+        >
+          <div class="footer-temp">
+            <div style="gap: 20px; display: flex; flex-direction: column">
+              <img src="/images/icon.png" alt="logo" style="width: 159px" />
+              <div style="line-height: 20px">
+                <h4 class="t-footer-h">สำนักสิ่งแวดล้อม</h4>
+                <span class="text-color-2 text-sm">
+                  ศาลาว่าการกรุงเทพ(ดินแดง) <br />ถนนมิตรไมตรี เขตดินแดง กทม.
+                  10400</span
+                >
+              </div>
+            </div>
+            <div class="flex-column" style="gap: 25px">
+              <h4 class="t-footer-h">ติดต่อเรา</h4>
+              <div class="flex-column t-footer-contact" style="gap: 10px">
+                <div class="flex gap-4">
+                  <img src="/svg/facebook.svg" alt="facebook" />
+                  <span>สำนักสิ่งแวดล้อม</span>
+                </div>
+                <div class="flex gap-4">
+                  <img src="/svg/facebook.svg" alt="facebook" />
+                  <span>กองจัดการคุณภาพอากาศและเสียง</span>
+                </div>
+                <div class="flex gap-4">
+                  <img src="/svg/facebook.svg" alt="facebook" />
+                  <span>กรุงเทพมหานคร</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex-column" style="gap: 25px">
+              <h4 class="t-footer-h">ลิงก์ที่เกี่ยวข้อง</h4>
+              <div class="t-footer-s">
+                <span>Air BKK</span>
+                <span>SENSOR FOR ALL</span>
+                <span>Windy</span>
+                <span>Emission Inventory</span>
+                <span>NASA Hotspot </span>
+                <span>อัตราการระบายอากาศ</span>
+                <span>Air4Thai</span>
+                <span>สำหรับเจ้าหน้าที่</span>
+              </div>
+            </div>
+            <div class="flex-column" style="gap: 40px">
+              <div class="flex-column" style="gap: 10px">
+                <h4 class="t-footer-h">
+                  กองจัดการคุณภาพอากาศและเสียงกรุงเทพมหานคร
+                </h4>
+                <div class="flex gap-2">
+                  <img src="/svg/phone.svg" alt="phone" />
+                  <span class="text-color-main">0-2203-2954</span>
+                </div>
+              </div>
+              <div class="flex-column" style="gap: 4px">
+                <h4 class="t-footer-s">จำนวนผู้เข้าใช้งาน</h4>
+                <span class="text-color-main semi-bold">661547</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex-column text-xs text-color-2 copyright"
+            style="gap: 4px"
+          >
+            <span>© 2024 Bangkok Air Quality, </span>
+            <span>ALL RIGHT RESERVED</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
