@@ -79,31 +79,6 @@ td {
   border: 1px solid #dddddd;
 }
 
-.tag-status {
-  padding: 6px 2px;
-  display: flex;
-  color: #333333;
-  align-items: center;
-  border-radius: 4px;
-  justify-content: center;
-  line-height: 20px;
-  width: 100%;
-}
-.status-vary-good {
-  background-color: #9ceeff;
-}
-.status-good {
-  background-color: #85edb8;
-}
-.status-normal {
-  background-color: #ffe8a9;
-}
-.status-bad {
-  background-color: #ffb98b;
-}
-.status-vary-bad {
-  background-color: #ffbabc;
-}
 
 .head-table-hr {
   display: flex;

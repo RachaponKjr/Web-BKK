@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global-style.css" />
+    <link rel="stylesheet" href="../styles/navbar-style.css" />
+    <link rel="stylesheet" href="../styles/footer-style.css" />
+    <link rel="stylesheet" href="../styles/air-style.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-image-bkk" style="height: min-content">
+        <!-- Navbar -->
+        <nav class="container flex-between gap-7 navbar">
+            <img src="../images/icon.png" alt="logo" />
+            <div class="navbar-menu">
+                <ul class="list-style flex-between text-navbar gap-6">
+                    <li><a href="index.html">แผนที่แสดงคุณภาพอากาศ</a></li>
+                    <li><a active href="air-infomation.html">ดัชนีคุณภาพอากาศ</a></li>
+                    <li><a href="report.html">รายงาน v</a></li>
+                    <li><a href="#">ระบบระบายมลพิษทางอากาศ</a></li>
+                    <li><a href="list-blogs.html">ข่าวสารประชาสัมพันธ์</a></li>
+                    <li><a href="notification-news.html">แจ้งข่าวสาร</a></li>
+                </ul>
+            </div>
+            <!-- ปุ่มเปลี่ยนภาษา -->
+            <div class="toggle-lang flex-center" style="cursor: pointer">
+                <img src="/svg/thailand.svg" alt="thailand" />
+            </div>
+            <!-- hamburger menu -->
+            <div class="hamburger-menu" style="cursor: pointer; height: 32px">
+                <img src="/svg/hamburger-menu.svg" alt="" style="width: 24px" />
+            </div>
+        </nav>
+        <!-- main pages -->
+        <main>
+            <!-- ข้อมูลดัชนีคุณภาพอากาศ -->
+            <div class="container">
+                <h4 class="text-2xl text-color-2 medium" style="margin: 16px 0px 0px 0px;">ข้อมูลดัชนีคุณภาพอากาศ</h4>
+                <div class="text-color-2"
+                    style="margin: 40px 0px;width: 1028px;max-width: 100%;place-self: center;display: flex;flex-direction: column;gap: 50px;">
+                    <div class="flex-column gap-4">
+                        <h6 class="text-22">ดัชนีคุณภาพอากาศ (Air Quality Index : AQI)</h6>
+                        <p class="text-lg">เป็นการรายงานข้อมูลคุณภาพอากาศในรูปแบบที่ง่ายต่อความเข้าใจของประชาชนทั่วไป
+                            เพื่อเผยแพร่ประชาสัมพันธ์ให้สาธารณชนได้รับทราบถึงสถานการณ์มลพิษทางอากาศในแต่ละพื้นที่ว่าอยู่ในระดับใด
+                            มีผลกระทบต่อสุขภาพอนามัยหรือไม่ ดัชนีคุณภาพอากาศ 1 ค่า
+                            ใช้เป็นตัวแทนค่าความเข้มข้นของสารมลพิษทางอากาศ 6 ชนิด ได้แก่</p>
+                    </div>
+                    <ul class="text-lg flex-column gap-7" style="list-style: disc;margin: 0px 0px 0px 20px;">
+                        <li>
+                            <span class="semi-bold">ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (PM2.5) </span>
+                            <p class="subtext">เป็นฝุ่นที่มีเส้นผ่านศูนย์กลางไม่เกิน 2.5 ไมครอน
+                                เกิดจากการเผาไหม้ทั้งจากยานพาหนะ การเผาวัสดุการเกษตร ไฟป่า และกระบวนการอุตสาหกรรม
+                                สามารถเข้าไปถึงถุงลมในปอดได้ เป็นผลทําให้เกิดโรคในระบบทางเดินหายใจ และโรคปอดต่างๆ
+                                หากได้รับในปริมาณมากหรือเป็นเวลานานจะสะสมในเนื้อเยื่อปอด
+                                ทําให้การทํางานของปอดเสื่อมประสิทธิภาพลง ทําให้หลอดลมอักเสบ มีอาการหอบหืด</p>
+                        </li>
+                        <li>
+                            <span class="semi-bold">ฝุ่นละอองขนาดไม่เกิน 10 ไมครอน (PM10)  </span>
+                            <p class="subtext">เป็นฝุ่นที่มีขนาดเส้นผ่านศูนย์กลางไม่เกิน 10 ไมครอน
+                                เกิดจากการเผาไหม้เชื้อเพลิง การเผาในที่โล่ง กระบวนการอุตสาหกรรม การบด การโม่
+                                หรือการทําให้เป็นผงจากการก่อสร้าง
+                                ส่งผลกระทบต่อสุขภาพเนื่องจากเมื่อหายใจเข้าไปสามารถเข้าไปสะสมในระบบทางเดินหายใจ
+                            </p>
+                        </li>
+                        <li>
+                            <span class="semi-bold">ก๊าซโอโซน (O3) </span>
+                            <p class="subtext">
+                                เป็นก๊าซที่ไม่มีสีหรือมีสีฟ้าอ่อน มีกลิ่นฉุน ละลายน้ำได้เล็กน้อย
+                                เกิดขึ้นได้ทั้งในระดับบรรยากาศชั้นที่สูงจากผิวโลก
+                                และระดับชั้นบรรยากาศผิวโลกที่ใกล้พื้นดิน
+                                ก๊าซโอโซนที่เป็นสารมลพิษทางอากาศคือก๊าซโอโซนในชั้นบรรยากาศผิวโลก
+                                เกิดจากปฏิกิริยาระหว่างก๊าซออกไซด์ของไนโตรเจน และสารประกอบอินทรีย์ระเหยง่าย
+                                โดยมีแสงแดดเป็นตัวเร่งปฏิกิริยา มีผลกระทบต่อสุขภาพ
+                                โดยก่อให้เกิดการระคายเคืองตาและระคายเคืองต่อระบบทางเดินหายใจและเยื่อบุต่างๆ
+                                ความสามารถในการทำงานของปอดลดลง เหนื่อยเร็ว โดยเฉพาะในเด็ก คนชรา
+                                และคนที่เป็นโรคปอดเรื้อรัง
+                            </p>
+                        </li>
+                        <li>
+                            <span class="semi-bold">ก๊าซคาร์บอนมอนอกไซด์ (CO) </span>
+                            <p class="subtext">
+                                เป็นก๊าซที่ไม่มีสี กลิ่น และรส
+                                เกิดจากการเผาไหม้ที่ไม่สมบูรณ์ของเชื้อเพลิงที่มีคาร์บอนเป็นองค์ประกอบ
+                                ก๊าซนี้สามารถสะสมอยู่ในร่างกายได้โดยจะไปรวมตัวกับฮีโมโกลบินในเม็ดเลือดแดงได้ดีกว่าออกซิเจนประมาณ
+                                200-250 เท่า เมื่อหายใจเข้าไปทำให้ก๊าซชนิดนี้จะไปแย่งจับกับฮีโมโกลบินในเลือด
+                                เกิดเป็นคาร์บอกซีฮีโมโกลบิน (CoHb) ทำให้การลำเลียงออกซิเจนไปสู่เซลล์ต่างๆ
+                                ของร่างกายลดน้อยลง ส่งผลให้ร่างกายเกิดอาการอ่อนเพลีย และหัวใจทำงานหนักขึ้น
+                            </p>
+                        </li>
+                        <li>
+                            <span class="semi-bold">ก๊าซไนโตรเจนไดออกไซด์ (NO2)  </span>
+                            <p class="subtext">เป็นก๊าซที่ไม่มีสีและกลิ่น ละลายน้ำได้เล็กน้อย มีอยู่ทั่วไปในธรรมชาติ
+                                หรือเกิดจากการกระทำของมนุษย์ เช่น การเผาไหม้เชื้อเพลิงต่างๆ อุตสาหกรรมบางชนิด เป็นต้น
+                                ก๊าซนี้มีผลต่อระบบการมองเห็นและผู้ที่มีอาการหอบหืดหรือ โรคเกี่ยวกับทางเดินหายใจ</p>
+                        </li>
+                        <li>
+                            <span class="semi-bold">ก๊าซซัลเฟอร์ไดออกไซด์ (SO2)  </span>
+                            <p class="subtext">เป็นก๊าซที่ไม่มีสี หรืออาจมีสีเหลืองอ่อนๆ
+                                มีรสและกลิ่นที่ระดับความเข้มข้นสูง เกิดจากธรรมชาติและการเผาไหม้เชื้อเพลิงที่มีกำมะถัน
+                                (ซัลเฟอร์) เป็นส่วนประกอบ สามารถละลายน้ำได้ดี
+                                สามารถรวมตัวกับสารมลพิษอื่นแล้วก่อตัวเป็นอนุภาคฝุ่นขนาดเล็กได้
+                                ก๊าซนี้มีผลกระทบโดยตรงต่อสุขภาพ ทำให้เกิดการระคายเคืองต่อเยื่อบุตา ผิวหนัง
+                                และระบบทางเดินหายใจ หากได้รับเป็นเวลานาน ๆ จะทำให้เป็นโรคหลอดลมอักเสบเรื้อรังได้</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-color-green">
+                <div class="container">
+                    <div class="flex-column gap-4 text-color-w" style="padding: 60px 0px;">
+                        <p class="text-xl light" style="color: #BCCEC5;">
+                            ดัชนีคุณภาพอากาศของประเทศไทยแบ่งเป็น 5 ระดับ คือ ตั้งแต่ 0 ถึง 201 ขึ้นไป<br />
+                            ซึ่งแต่ละระดับจะใช้สีเป็นสัญญลักษณ์เปรียบเทียบระดับของผลกระทบต่อสุขภาพอนามัย (ตารางที่ 1) 
+                        </p>
+                        <p class="text-xl light" style="color: #BCCEC5;">
+                            โดยดัชนีคุณภาพอากาศ 100 จะมีค่าเทียบเท่ามาตรฐานคุณภาพอากาศในบรรยากาศโดยทั่วไป<br />
+                            หากดัชนีคุณภาพอากาศมีค่าสูงเกินกว่า 100 แสดงว่าค่าความเข้มข้นของมลพิษทางอากาศ<br />
+                            มีค่าเกินมาตรฐานและคุณภาพอากาศในวันนั้นจะเริ่มมีผลกระทบต่อสุขภาพอนามัยของประชาชน
+                        </p>
+                        <div>
+                            <h6 class="text-lg semi-bold">ตารางที่ 1 : เกณฑ์ของดัชนีคุณภาพอากาศของประเทศไทย</h6>
+                            <div class="table-aqi">
+                                <table class="info-table-aqi">
+                                    <thead>
+                                        <tr>
+                                            <th style="min-width: 110px;">AQI</th>
+                                            <th style="min-width: 110px;">สีที่ใช้</th>
+                                            <th style="min-width: 208px;">ความหมาย</th>
+                                            <th>คำอธิบาย</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background-color: white;">
+                                        <tr>
+                                            <td>0 - 25</td>
+                                            <td style="position: relative;padding: 0px 30px;place-items: center;">
+                                                <div class="status-o status-b-blue">
+                                                    <div class="status-blue"></div>
+                                                </div>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="tag-status status-vary-good"> อากาศดีมาก </span>
+                                            </td>
+                                            <td>ประชาชนทุกคนสามารถดำเนินชีวิตได้ตามปกติ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>26 - 50</td>
+                                            <td style="position: relative;padding: 0px 30px;place-items: center;">
+                                                <div class="status-o status-b-green">
+                                                    <div class="status-green"></div>
+                                                </div>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="tag-status status-good"> อากาศดี </span>
+                                            </td>
+                                            <td>
+                                                <b>ประชาชนทั่วไป :</b> สามารถทำกิจกรรมกลางแจ้งได้ตามปกติ<br>
+                                                <b>ประชาชนกลุ่มเสี่ยง :</b> ควรสังเกตอาการผิดปกติ เช่น ไอบ่อย หายใจลำบาก
+                                                หายใจถี่ หายใจไม่ออก หายใจมีเสียงวี้ด แน่นหน้าอก เจ็บหน้าอก ใจสั่น
+                                                คลื่นไส้ เมื่อยล้าผิดปกติ หรือ วิงเวียนศีรษะ
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>51 - 100</td>
+                                            <td style="position: relative;padding: 0px 30px;place-items: center;">
+                                                <div class="status-o status-b-yellow">
+                                                    <div class="status-yellow"></div>
+                                                </div>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="tag-status status-normal"> อากาศปานกลาง </span>
+                                            </td>
+                                            <td>
+                                                <b>ประชาชนทั่วไป :</b>
+                                                ลดระยะเวลาการทำกิจกรรมหรือการออกกำลังกายกลางแจ้งที่ใช้แรงมาก<br>
+                                                <b>ประชาชนกลุ่มเสี่ยง :</b><br />
+                                                <ul style="margin-left: 30px;">
+                                                    <li>ใช้อุปกรณ์ป้องกันตนเอง เช่น หน้ากากป้องกัน PM2.5 ทุกครั้ง
+                                                        ที่ออกนอกอาคาร</li>
+                                                    <li>ลดระยะเวลาการทำกิจกรรมหรือการออกกำลังกายกลางแจ้งที่ใช้แรงมาก
+                                                    </li>
+                                                    <li>หากมีอาการผิดปกติให้รีบปรึกษาแพทย์</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>101 - 200</td>
+                                            <td style="position: relative;padding: 0px 30px;place-items: center;">
+                                                <div class="status-o status-b-or">
+                                                    <div class="status-or"></div>
+                                                </div>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="tag-status status-bad"> เริ่มมีผลกระทบ </span>
+                                            </td>
+                                            <td>
+                                                <b>ประชาชนทั่วไป :</b> <br />
+                                                - ใช้อุปกรณ์ป้องกันตนเอง เช่น หน้ากากป้องกัน
+                                                PM2.5 ทุกครั้งที่ออกนอกอาคาร<br />
+                                                -
+                                                จำกัดระยะเวลาในการทำกิจกรรมหรือการออกกำลังกายกลางแจ้งที่ใช้แรงมาก<br />
+                                                - ควรสังเกตอาการผิดปกติ เช่น ไอ หายใจลำบาก ระคายเคืองตา<br />
+                                                <b>ประชาชนกลุ่มเสี่ยง :</b> <br />
+                                                - ใช้อุปกรณ์ป้องกันตนเอง เช่น หน้ากากป้องกัน
+                                                PM2.5 ทุกครั้งที่ออกนอกอาคาร<br />
+                                                - เลี่ยงการทำกิจกรรมหรือการออกกำลังกายกลางแจ้งที่ใช้แรงมาก<br />
+                                                - ให้ปฏิบัติตามคำแนะนำของแพทย์ หากมีอาการผิดปกติให้รีบไปพบแพทย์
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>201 ขึ้นไป</td>
+                                            <td style="position: relative;padding: 0px 30px;place-items: center;">
+                                                <div class="status-o status-b-red">
+                                                    <div class="status-red"></div>
+                                                </div>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="tag-status status-vary-bad"> มีผลกระทบต่อสุขภาพ </span>
+                                            </td>
+                                            <td>
+                                                <b>ประชาชนทุกคน :</b><br />
+                                                - งดกิจกรรมกลางแจ้ง<br />
+                                                - หากมีความจำเป็นต้องทำกิจกรรมกลางแจ้งให้ใช้อุปกรณ์ป้องกันตนเองทุกครั้ง
+                                                เช่น หน้ากากป้องกัน PM2.5<br />
+                                                - หากมีอาการผิดปกติให้รีบไปพบแพทย์<br />
+                                                - ผู้ที่มีโรคประจำตัว ควรอยู่ในพื้นที่ปลอดภัยจากมลพิษทางอากาศ
+                                                ให้เตรียมยาและอุปกรณ์ที่จำเป็นให้พร้อม
+                                                และปฏิบัติตามคำแนะนำของแพทย์อย่างเคร่งครัด
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- Mobile Table -->
+                                <div class="mobile-aqi-table" style="display: none;background-color: white;border-radius: 10px;overflow: hidden;">
+
+                                    <div class="flex-column gap-4"
+                                        style="padding: 10px;background: #E9FFF7;border-bottom:1px solid #666666 ;">
+                                        <div class="bg-g-main flex-center"
+                                            style="border-radius: 10px;padding: 14px;width: 100%;height: 54px;">
+                                            <span style="width: 106px;">AQI</span>
+                                            <span style="width: 100%;">0 - 25</span>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">สีที่ใช้</h4>
+                                            <div style="width: 100%;">
+                                                <div class="status-o status-b-blue">
+                                                    <div class="status-blue"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">ความหมาย</h4>
+                                            <div class="flex gap-4" style="width: 100%;">
+                                                <span class="tag-status status-vary-good"> อากาศดีมาก </span>
+                                                <img src="/svg/close.svg" alt="" class="toggle-info-btn"
+                                                    style="margin: 0 10px" />
+                                            </div>
+                                        </div>
+                                        <div style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
+                                            <span class="text-color-2">ประชาชนทุกคนสามารถดำเนินชีวิตได้ตามปกติ</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex-column gap-4"
+                                        style="padding: 10px;background: #E9FFF7;border-bottom:1px solid #666666 ;">
+                                        <div class="bg-g-main flex-center"
+                                            style="border-radius: 10px;padding: 14px;width: 100%;height: 54px;">
+                                            <span style="width: 106px;">AQI</span>
+                                            <span style="width: 100%;">26 - 50</span>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">สีที่ใช้</h4>
+                                            <div style="width: 100%;">
+                                                <div class="status-o status-b-green">
+                                                    <div class="status-green"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">ความหมาย</h4>
+                                            <div class="flex gap-4" style="width: 100%;">
+                                                <span class="tag-status status-good"> อากาศดี </span>
+                                                <img src="/svg/close.svg" alt="" class="toggle-info-btn"
+                                                    style="margin: 0 10px" />
+                                            </div>
+                                        </div>
+                                        <div style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
+                                            <span class="text-color-2">
+                                                <strong>ประชาชนทั่วไป :</strong> สามารถทำกิจกรรมกลางแจ้ง
+                                                ได้ตามปกติฒ<br />
+                                                <strong>ประชาชนกลุ่มเสี่ยง :</strong> ควรสังเกตอาการผิดปกติ เช่น ไอบ่อย
+                                                หายใจลำบาก หายใจถี่ หายใจไม่ออก หายใจมีเสียงวี้ด แน่นหน้าอก เจ็บหน้าอก
+                                                ใจสั่น คลื่นไส้ เมื่อยล้าผิดปกติ หรือ วิงเวียนศีรษะ
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-column gap-4"
+                                        style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #666666 ;">
+                                        <div class="bg-g-main flex-center"
+                                            style="border-radius: 10px;padding: 14px;width: 100%;height: 54px;">
+                                            <span style="width: 106px;">AQI</span>
+                                            <span style="width: 100%;">51 - 100</span>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">สีที่ใช้</h4>
+                                            <div style="width: 100%;">
+                                                <div class="status-o status-b-yellow">
+                                                    <div class="status-yellow"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">ความหมาย</h4>
+                                            <div class="flex gap-4" style="width: 100%;">
+                                                <span class="tag-status status-normal"> อากาศปานกลาง </span>
+                                                <img src="/svg/open.svg" alt="" class="toggle-info-btn"
+                                                    style="margin: 0 10px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column gap-4"
+                                        style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #666666 ;">
+                                        <div class="bg-g-main flex-center"
+                                            style="border-radius: 10px;padding: 14px;width: 100%;height: 54px;">
+                                            <span style="width: 106px;">AQI</span>
+                                            <span style="width: 100%;">101 - 200</span>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">สีที่ใช้</h4>
+                                            <div style="width: 100%;">
+                                                <div class="status-o status-b-or">
+                                                    <div class="status-or"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">ความหมาย</h4>
+                                            <div class="flex gap-4" style="width: 100%;">
+                                                <span class="tag-status status-bad"> เริ่มมีผลกระทบ </span>
+                                                <img src="/svg/open.svg" alt="" class="toggle-info-btn"
+                                                    style="margin: 0 10px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column gap-4"
+                                        style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #666666 ;">
+                                        <div class="bg-g-main flex-center "
+                                            style="border-radius: 10px;padding: 14px;width: 100%;height: 54px;">
+                                            <span style="width: 106px;">AQI</span>
+                                            <span style="width: 100%;">201 ขึ้นไป</span>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">สีที่ใช้</h4>
+                                            <div style="width: 100%;">
+                                                <div class="status-o status-b-red">
+                                                    <div class="status-red"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-center">
+                                            <h4 class="text-color-2" style="width: 126px;">ความหมาย</h4>
+                                            <div class="flex gap-4" style="width: 100%;">
+                                                <span class="tag-status status-vary-bad"> มีผลกระทบต่อสุขภาพ </span>
+                                                <img src="/svg/open.svg" alt="" class="toggle-info-btn"
+                                                    style="margin: 0 10px" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="info-air" style="margin-left: 100px;">
+                                <div class="head-info">
+                                    <span>การคำนวณดัชนีคุณภาพอากาศรายวันของสารมลพิษทางอากาศแต่ละประเภท</span>
+                                    <p>คำนวณจากค่าความเข้มข้นของสารมลพิษทางอากาศจากข้อมูลผลการตรวจวัดคุณภาพอากาศ<br />
+                                        โดยมีระดับของค่าความเข้มข้นของสารมลพิษทางอากาศที่เทียบเท่ากับค่าดัชนีคุณภาพอากาศที่ระดับต่างๆ
+                                        ดัง (ตารางที่ 2)<br /> การคำนวณดัชนีคุณภาพอากาศภายในช่วงระดับ เป็นสมการเส้นตรง
+                                        ดังนี้</p>
+                                </div>
+                                <div>
+                                    <span class="semi-bold">กำหนดให้</span>
+                                    <div class="flex gap-4 formula" style="width: 100%;">
+                                        <div class="flex-column m-w-100 formula-img" style="width: 50%;">
+                                            <img src="/images/x.png" alt="x" />
+                                            <span>จากค่าดัชนีย่อยที่คำนวณได้
+                                                สารมลพิษทางอากาศประเภทใดมีค่าดัชนีสูงสุดจะใช้เป็นดัชนีคุณภาพอากาศ (AQI)
+                                                ณ ช่วงเวลานั้น</span>
+                                        </div>
+                                        <div class="flex-column m-w-100"
+                                            style="padding: 20px;background-color: rgba(255, 255, 255, 0.2); width: 50%;border-radius: 20px;justify-content: space-between;">
+                                            <div class="flex gap-2">
+                                                <span style="min-width: 60px;text-align: end;">I =</span>
+                                                <p>ค่าดัชนีย่อยคุณภาพอากาศ</p>
+                                            </div>
+                                            <div class="flex gap-2">
+                                                <span style="min-width: 60px;text-align: end;">X =</span>
+                                                <p>ความเข้มข้นของสารมลพิษทางอากาศจากการตรวจวัด</p>
+                                            </div>
+                                            <div class="flex gap-2">
+                                                <span style="min-width: 60px;text-align: end;">Xi , Xj =</span>
+                                                <p>ค่าต่ำสุด, สูงสุด ของช่วงความเข้มข้นสารมลพิษที่มีค่า X</p>
+                                            </div>
+                                            <div class="flex gap-2">
+                                                <span style="min-width: 60px;text-align: end;">Ii , Ij =</span>
+                                                <p>ค่าต่ำสุด, สูงสุด ของช่วงดัชนีคุณภาพอากาศที่ตรงกับช่วงความเข้มข้น X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- ตาราง 2 -->
+            <div class="container table-average" style="padding: 60px 0px;">
+                <h4 class="text-color-2" style="margin-bottom: 8px;">ตารางที่ 2
+            ค่าความเข้มข้นของสารมลพิษทางอากาศที่เทียบเท่ากับค่าดัชนีคุณภาพอากาศ</h4>
+        <table class="table-two">
+            <tr>
+                <th rowspan="2" style="width: 170px;height: 120px;">AQI</th>
+                <th colspan="2" style="width: 340px;height: 60px;">เฉลี่ย 24 ชั่วโมง</th>
+                <th colspan="2" style="width: 340px;height: 60px;">เฉลี่ย 8 ชั่วโมง</th>
+                <th colspan="2" style="width: 340px;height: 60px;">เฉลี่ย 1 ชั่วโมง</th>
+            </tr>
+            <tr>
+                <th style="width: 170px;height: 60px;">PM2.5 (มคก./ลบ.ม.)</th>
+                <th style="width: 170px;height: 60px;">PM10 (มคก./ลบ.ม.)</th>
+                <th style="width: 170px;height: 60px;">O3 (ppb)</th>
+                <th style="width: 170px;height: 60px;">CO (ppm)</th>
+                <th style="width: 170px;height: 60px;">NO2 (ppb)</th>
+                <th style="width: 170px;height: 60px;">SO2 (ppb)</th>
+            </tr>
+            <tr class="item-info">
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-blue">
+                            <div class="status-blue"></div>
+                        </div>
+                        <spna>0 - 25</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-blue">
+                            <div class="status-blue"></div>
+                        </div>
+                        <spna>0 - 25</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-blue">
+                            <div class="status-blue"></div>
+                        </div>
+                        <spna>0 - 25</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-blue">
+                            <div class="status-blue"></div>
+                        </div>
+                        <spna>0 - 25</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-blue">
+                            <div class="status-blue"></div>
+                        </div>
+                        <spna>0 - 25</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-blue">
+                            <div class="status-blue"></div>
+                        </div>
+                        <spna>0 - 25</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-blue">
+                            <div class="status-blue"></div>
+                        </div>
+                        <spna>0 - 25</spna>
+                    </div>
+                </td>
+            </tr>
+            <tr class="item-info">
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-green">
+                            <div class="status-green"></div>
+                        </div>
+                        <spna>26 - 50</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-green">
+                            <div class="status-green"></div>
+                        </div>
+                        <spna>26 - 50</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-green">
+                            <div class="status-green"></div>
+                        </div>
+                        <spna>26 - 50</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-green">
+                            <div class="status-green"></div>
+                        </div>
+                        <spna>26 - 50</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-green">
+                            <div class="status-green"></div>
+                        </div>
+                        <spna>26 - 50</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-green">
+                            <div class="status-green"></div>
+                        </div>
+                        <spna>26 - 50</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-green">
+                            <div class="status-green"></div>
+                        </div>
+                        <spna>26 - 50</spna>
+                    </div>
+                </td>
+            </tr>
+            <tr class="item-info">
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-yellow">
+                            <div class="status-yellow"></div>
+                        </div>
+                        <spna>51 - 100</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-yellow">
+                            <div class="status-yellow"></div>
+                        </div>
+                        <spna>51 - 100</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-yellow">
+                            <div class="status-yellow"></div>
+                        </div>
+                        <spna>51 - 100</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-yellow">
+                            <div class="status-yellow"></div>
+                        </div>
+                        <spna>51 - 100</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-yellow">
+                            <div class="status-yellow"></div>
+                        </div>
+                        <spna>51 - 100</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-yellow">
+                            <div class="status-yellow"></div>
+                        </div>
+                        <spna>51 - 100</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-yellow">
+                            <div class="status-yellow"></div>
+                        </div>
+                        <spna>51 - 100</spna>
+                    </div>
+                </td>
+            </tr>
+            <tr class="item-info">
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-or">
+                            <div class="status-or"></div>
+                        </div>
+                        <spna>101 - 200</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-or">
+                            <div class="status-or"></div>
+                        </div>
+                        <spna>101 - 200</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-or">
+                            <div class="status-or"></div>
+                        </div>
+                        <spna>101 - 200</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-or">
+                            <div class="status-or"></div>
+                        </div>
+                        <spna>101 - 200</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-or">
+                            <div class="status-or"></div>
+                        </div>
+                        <spna>101 - 200</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-or">
+                            <div class="status-or"></div>
+                        </div>
+                        <spna>101 - 200</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-or">
+                            <div class="status-or"></div>
+                        </div>
+                        <spna>101 - 200</spna>
+                    </div>
+                </td>
+            </tr>
+            <tr class="item-info">
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-red">
+                            <div class="status-red"></div>
+                        </div>
+                        <spna>201 ขึ้นไป</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-red">
+                            <div class="status-red"></div>
+                        </div>
+                        <spna>201 ขึ้นไป</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-red">
+                            <div class="status-red"></div>
+                        </div>
+                        <spna>201 ขึ้นไป</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-red">
+                            <div class="status-red"></div>
+                        </div>
+                        <spna>201 ขึ้นไป</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-red">
+                            <div class="status-red"></div>
+                        </div>
+                        <spna>201 ขึ้นไป</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-red">
+                            <div class="status-red"></div>
+                        </div>
+                        <spna>201 ขึ้นไป</spna>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: grid;place-items: center;">
+                        <div class="status-o status-b-red">
+                            <div class="status-red"></div>
+                        </div>
+                        <spna>201 ขึ้นไป</spna>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <!-- ตาราง Mobile -->
+        <div class="table-info-air-mobile" style="display: none;">
+            <div style="width: 100%; overflow-y: auto; max-height: 200px;">
+                <div class="text-sm" style="display: grid; grid-template-columns: repeat(6, 1fr);">
+                    <div class="menu-pm" active style="text-align: center; padding: 10px 20px;width: max-content;">
+                        <span>PM2.5<br />(มคก./ลบ.ม.)</span>
+                    </div>
+                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                        <span>PM10<br />(มคก./ลบ.ม.)</span>
+                    </div>
+                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                        <span>O3<br />(ppb)</span>
+                    </div>
+                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                        <span>CO<br />(ppm)</span>
+                    </div>
+                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                        <span>NO2<br />(ppb)</span>
+                    </div>
+                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                        <span>SO2<br />(ppb)</span>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 20px 0px;position: relative; ">
+                <table class="table-mobile-status" style="width: 300px;margin: 0px auto;">
+                    <tr>
+                        <th style="width: 150px;">AQI</th>
+                        <th style="width: 150px">เฉลี่ย 24 ชั่วโมง</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div
+                    style="top: 50%;left: 0px;width: 32px;aspect-ratio: 1/1;border-radius: 100%;position: absolute;background: #DFDFDF;display: grid;place-content: center;">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.00012 1L0.999863 7.00026" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M7.00012 13L0.999861 6.99974" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div
+                    style="top: 50%;right: 0px;width: 32px;aspect-ratio: 1/1;border-radius: 100%;position: absolute;background: #03754A;display: grid;place-content: center;">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.999878 1L7.00014 7.00026" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M0.999878 13L7.00014 6.99974" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-average-air" style="margin-left: 100px;margin-top: 30px;">
+            <h5 class="text-xl text-color-2">ช่วงเวลาเฉลี่ย และหน่วยสารมลพิษทางอากาศที่ใช้ในการคำนวน</h5>
+            <ul class="flex flex-column gap-2 text-color-2" style="margin-left: 30px;margin-top: 10px;">
+                <li>PM2.5 เฉลี่ย 24 ชั่วโมงต่อเนื่อง : ไมโครกรัมต่อลูกบาศก์เมตร หรือ มคก./ลบ.ม. หรือ µg./m3</li>
+                <li>PM10 เฉลี่ย 24 ชั่วโมงต่อเนื่อง : ไมโครกรัมต่อลูกบาศก์เมตร หรือ มคก./ลบ.ม. หรือ µg./m3</li>
+                <li>O3 เฉลี่ย 8 ชั่วโมงต่อเนื่อง : ส่วนในพันล้านส่วน หรือ ppb หรือ 1/1,000,000,000</li>
+                <li>CO เฉลี่ย 8 ชั่วโมงต่อเนื่อง : ส่วนในล้านส่วน หรือ ppm หรือ 1/1,000,000</li>
+                <li>NO2 เฉลี่ย 1 ชั่วโมง : ส่วนในพันล้านส่วน หรือ ppb หรือ 1/1,000,000,000</li>
+                <li>SO2 เฉลี่ย 1 ชั่วโมง : ส่วนในพันล้านส่วน หรือ ppb หรือ 1/1,000,000,000</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ส่วนที่ 3 -->
+    <div class="bg-color-green main-table-three flex-column gap-6" style="padding: 60px 0px;">
+        <div class="container table-three " style="border-radius: 20px;overflow: hidden;font-size: 14px;">
+            <div class="flex" style="width: 100%;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex" style="width: 100%;background: #DEDEDE;">
+                    <span style="width: 50%;"></span>
+                    <span class="semi-bold"
+                        style="width: 50%;padding: 19px 0px;color: #666666;text-align: center;">วิธีตรวจวัด</span>
+                </div>
+            </div>
+            <!-- ส่วน เนื้อหา -->
+            <div class="flex" style="background-color: #EEEEEE;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span>สารมลพิษในบรรยากาศ (Air Pollutants)</span>
+                    <span>
+                        ค่ามาตรฐาน (Standards)จะต้องไม่เกิน
+                    </span>
+                    <span style="min-width: 10rem;">ค่าเฉลี่ยเวลา (Avg. Time)</span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                    <span class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">ประกาศกรมควบคุมมลพิษ</span>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">ก๊าซคาร์บอนมอนอกไซด์(1)Carbon Monoxide (CO)</span>
+                    <span style="width: 100%;">
+                        30 ppm (34.2mg/m3)<br />
+                        9 ppm (10.26mg/m3)
+                    </span>
+                    <span style="min-width: 10rem;">
+                        1 ชั่วโมง<br />
+                        8 ชั่วโมง
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">ระบบนันดีสเปอร์ซีฟ อินฟราเรด ดีเทคชั่น<br />
+                        (Non-dispersive Infrared Detection)</span>
+                    <span class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">-</span>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">ก๊าซซัลเฟอร์ไดออกไซด์ (1),(2),(3)Sulfur Dioxide (SO2)</span>
+                    <span style="width: 100%;">
+                        0.30 ppm (780 μg/m3)<br />
+                        0.12 ppm (0.30 mg/m3)<br />
+                        0.04 ppm (0.10 mg/m3)
+                    </span>
+                    <span style="min-width: 10rem;">
+                        1 ชั่วโมง<br />
+                        24 ชั่วโมง<br />
+                        1 ปี
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">ระบบ ยู วี ฟลูออเรสเซน (2)<br />
+                        ระบบพาราโรซานิลีน (1) (Pararosaniline)</span>
+                    <span class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">
+                        ระบบพาราโรซานิลีน<br />
+                        ระบบอุลตร้าไวโอเลต ฟลูออเรสเซน(Ultraviolet Fluorescence)
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">ก๊าซไนโตรเจนไดออกไซด์ (1),(5)Nitrogen Dioxide (NO2)</span>
+                    <span style="width: 100%;">
+                        0.17 ppm (0.32 mg/m3)<br />
+                        0.03 ppm (0.057 mg/m3)
+                    </span>
+                    <span style="min-width: 10rem;">
+                        1 ชั่วโมง<br />
+                        1 ปี
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">
+                        ระบบเคมีลูมิเนสเซน (5)<br />
+                        (Chemiluminescence)
+                    </span>
+                    <span class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">
+                        ระบบคาวิตี แอทเทนนูเอเต็ด เฟส ชิพ สเปกโทรสโกปี <br />(Cavity Attenuated Phase Shift
+                        Spectroscopy; CAPS)
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">
+                        ก๊าซโอโซน (1),(4)<br />
+                        Ozone (O3)
+                    </span>
+                    <span style="width: 100%;">
+                        0.10 ppm (0.20 mg/m3)<br />
+                        0.07 ppm (0.14 mg/m3)
+                    </span>
+                    <span style="min-width: 10rem;">
+                        1 ชั่วโมง<br />
+                        8 ชั่วโมง
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">
+                        ระบบเคมีลูเนสเซน
+                    </span>
+                    <span class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">
+                        ระบบอุลตร้าไวโอเลต แอ็บซอบชั่น โฟโตเมดตรี(Ultraviolet Absorption Photometry)
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">
+                        ตะกั่ว <br />
+                        (1)Lead (Pb)
+                    </span>
+                    <span style="width: 100%;">
+                        1.5 μg/m3
+                    </span>
+                    <span style="min-width: 10rem;">
+                        1 เดือน
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">
+                        ระบบอะตอมมิก แอบซอพชั่น สเปคโตรมิเตอร์<br />(Atomic Absorption Spectrometer)
+                    </span>
+                    <span class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">
+                        -
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">
+                        ฝุ่นละอองรวมหรือฝุ่นละอองขนาดไม่เกิน100 ไมครอน (1),(3)Total Suspended Particulate Matter (TSP)
+                    </span>
+                    <span style="width: 100%;">
+                        0.33 mg/m3<br />
+                        0.10 mg/m3
+                    </span>
+                    <span style="min-width: 10rem;">
+                        24 ชั่วโมง<br />
+                        1 ปี
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">
+                        ระบบกราวิเมตริก<br />(Gravimetric)
+                    </span>
+                    <span class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">
+                        -
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">
+                        ฝุ่นละอองขนาดไม่เกิน 10 ไมครอน (1),(3),(9)<br />
+                        Particulate matter withanaerodynamic diameterless than or equal to a nominal 10 micrometers
+                        (PM10)
+                    </span>
+                    <span style="width: 100%;">
+                        120 μg/m3<br />
+                        50 μg/m3
+                    </span>
+                    <span style="min-width: 10rem;">
+                        24 ชั่วโมง<br />
+                        1 ปี
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">
+                        ระบบกราวิเมตริก (1)<br />(Gravimetric)
+                    </span>
+                    <div class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">
+                        <ul>
+                            <li>วิธีเบต้า เรดิเอชั่น แอทเทนนูเอชัน (Beta Radiation Attenuation)</li>
+                            <li>วิธีเทปเปอร์ อิลิเมนต์ ออสซิเลติง ไมโครบาลานซ์ (Tapered Element Oscillating
+                                Microbalance: TEOM)</li>
+                            <li>วิธีการกระเจิงของแสง (Light Scattering)</li>
+                            <li>วิธีเก็บตัวอย่างด้วยเครื่องเก็บตัวอย่างอากาศแบบไดโคโตมัส 9 (Dichotomous Air Sampler)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">
+                        ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน (6)Particulate matter with anaerodynamic diameterless than or
+                        equal to a nominal 2.5 micrometers (PM2.5)
+                    </span>
+                    <span style="width: 100%;">
+                        37.5 μg/m3<br />
+                        15 μg/m3
+                    </span>
+                    <span style="min-width: 10rem;">
+                        24 ชั่วโมง<br />
+                        1 ปี
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">
+                        ระบบกราวิเมตริก<br />(Gravimetric)
+                    </span>
+                    <div class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">
+                        <ul>
+                            <li>วิธีเบต้า เรดิเอชั่น แอทเทนนูเอชัน (Beta Radiation Attenuation)</li>
+                            <li>วิธีเทปเปอร์ อิลิเมนต์ ออสซิเลติง ไมโครบาลานซ์ (Tapered Element Oscillating
+                                Microbalance: TEOM)</li>
+                            <li>วิธีการกระเจิงของแสง (Light Scattering)</li>
+                            <li>วิธีเก็บตัวอย่างด้วยเครื่องเก็บตัวอย่างอากาศแบบไดโคโตมัส (Dichotomous Air Sampler)
+                                และวิเคราะห์ด้วยวิธีกราวิเมตริก</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex" style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;">
+                <div class="flex gap-4 table-row" style="width: 50%;">
+                    <span style="width: 100%;">
+                        ก๊าซคาร์บอนไดซัลไฟด์ (7)Carbon Disulfide (CS2)
+                    </span>
+                    <span style="width: 100%;">
+                        100 μg/m3
+                    </span>
+                    <span style="min-width: 10rem;">
+                        24 ชั่วโมง
+                    </span>
+                </div>
+                <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                    <span style="padding: 0px 0px 0px 9px;width: 50%;">
+                        US EPA Compendium Method TO-15 (7)
+                    </span>
+                    <span class="flex"
+                        style="padding: 0px 0px 0px 9px;border-left: 2px solid #DEDEDE;height: 100%;align-items: center;width: 50%;">
+                        -
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="container table-three " style="border-radius: 20px;overflow: hidden;font-size: 14px;">
+                <div class="flex" style="width: 100%;border-bottom: 1px solid #DEDEDE;">
+                    <div class="flex semi-bold"
+                        style="width: 100%;background: #DEDEDE; align-items: center;padding: 19px 0px;color: #666666;">
+                        <span style="width: 50%;padding-left:10px ;">ค่ามาตรฐานสารอินทรีย์ระเหยง่าย (Volatile Organic
+                            Compounds; VOCs) (8)</span>
+                        <span style="width: 50%;padding-left:10px ;">วิธีตรวจวัด</span>
+                    </div>
+                </div>
+                <!-- ส่วน เนื้อหา -->
+                <div class="flex" style="background-color: #EEEEEE;border-bottom: 1px solid #DEDEDE;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">สารมลพิษในบรรยากาศ (Air Pollutants)</span>
+                        <span style="min-width: 12rem;">
+                            ค่ามาตรฐาน (Standards)จะต้องไม่เกิน
+                        </span>
+                        <span style="min-width: 10rem;">ค่าเฉลี่ยเวลา (Avg. Time)</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">เบนซีน (Benzene)</span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">ไวนิลคลอไรด์ (Vinyl Chloride)</span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">1,2 - ไดคลอโรอีเทน (1,2 - Dichloroethane)</span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">ไตรคลอโรเอทธิลีน (Trichloroethylene)</span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">ไดคลอโรมีเทน (Dichloromethane)</span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">1,2 - ไดคลอโรโพรเพน (1,2 - Dichloropropane)</span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">เตตระคลอโรเอทธิลีน (Tetrachloroethylene) </span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">คลอโรฟอร์ม (Chloroform)</span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+
+                <div class="flex"
+                    style="background-color: #ffffff;border-bottom: 1px solid #DEDEDE;align-items: center;">
+                    <div class="flex table-row semi-bold" style="width: 50%;color: #666666;">
+                        <span style="width: 100%;">1,3 - บิวทาไดอีน (1,3 - Butadiene)</span>
+                        <span style="min-width: 12rem;">
+                            1.7 μg/m3
+                        </span>
+                        <span style="min-width: 10rem;">1 ปี</span>
+                    </div>
+                    <div class="flex gap-4" style="width: 50%;border-left: 2px solid #DEDEDE;align-items: center;">
+                        <span style="padding: 19px 0px 19px 9px;width: 100%;">US EPA Compendium Method TO-14A หรือ US
+                            EPA Compendium Method TO-15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Mobile ส่วน ที่ 3 -->
+         <div class="mobile-detail-air" style="padding: 0px 16px;display: none;">
+             <div style="background-color: #EEEEEE;border-radius: 10px;overflow: hidden;border: 1px solid #BBBBBB;">
+                <div style="padding: 14px;color: #666666;border-bottom: 1px solid #BBBBBB;">
+                    <div style="text-align: center;">
+                        <span>สารมลพิษในบรรยากาศ (Air Pollutants)</span>
+                    </div>
+                    <div style="margin: 10px 0px;width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex gap-4">
+                        <div>
+                            <span>ค่ามาตรฐาน (Standards)<br/>
+                                จะต้องไม่เกิน</span>
+                        </div>
+                        <div style="width: 1px;height: 100%x;background: #CCCCCC;"></div>
+                        <div >
+                            <span>ค่าเฉลี่ยเวลา<br/>(Avg. Time)</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="flex-column gap-4" style="padding: 10px;background: #E9FFF7;border-bottom:1px solid #CCCCCC ;">
+                     <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                         <span style="color: #FFFFFF;">ก๊าซคาร์บอนมอนอกไซด์ (1)  </span>
+                         <span style="color: #A0F0D2;">Carbon Monoxide (CO)</span>
+                        </div>
+                        <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                        <div class="flex-between" style="align-items: start;color: #333333;">
+                            <div>
+                                <spna>30 ppm (34.2mg/m3)<br/>
+                                    9 ppm (10.26mg/m3)</spna>
+                            </div>
+                            <div>
+                                1 ชั่วโมง<br/>
+                                8 ชั่วโมง
+                            </div>
+                            <img src="/svg/close.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                </div>
+                <div style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                    <div>
+                        <div style="padding: 16px; background-color: #EEEEEE;">
+                            <span class="text-color-2 semi-bold">ประชาชนทุกคนสามารถดำเนินชีวิตได้ตามปกติ</span>
+                        </div>
+                        <div style="padding: 16px; background-color: #FFFFFF;">
+                            <span style="color: #333333;">ระบบนันดีสเปอร์ซีฟ อินฟราเรด ดีเทคชั่น(Non-dispersive Infrared Detection)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="padding: 16px; background-color: #EEEEEE;">
+                            <span class="text-color-2 semi-bold">ประกาศกรมควบคุมมลพิษ</span>
+                        </div>
+                        <div style="padding: 16px; background-color: #FFFFFF;">
+                            <span style="color: #333333;">-</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ก๊าซซัลเฟอร์ไดออกไซด์  </span>
+                        <span style="color: #A0F0D2;">Sulfur Dioxide (SO2)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                0.30 ppm (780 μg/m3)<br/>
+                                0.12 ppm (0.30 mg/m3)<br/>
+                                0.04 ppm (0.10 mg/m3)
+                            </spna>
+                        </div>
+                        <div>
+                            1 ชั่วโมง<br/>
+                            24 ชั่วโมง<br/>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+            </div>
+            
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ก๊าซไนโตรเจนไดออกไซด์   </span>
+                        <span style="color: #A0F0D2;">Nitrogen Dioxide (NO2)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                0.17 ppm (0.32 mg/m3)<br/>
+                                0.03 ppm (0.057 mg/m3)
+                            </spna>
+                        </div>
+                        <div>
+                            1 ชั่วโมง<br/>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+            </div>
+            
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ก๊าซโอโซน  </span>
+                        <span style="color: #A0F0D2;">Ozone (O3)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                0.10 ppm (0.20 mg/m3)<br/>
+                                0.07 ppm (0.14 mg/m3)
+                            </spna>
+                        </div>
+                        <div>
+                            1 ชั่วโมง<br/>
+                            8 ชั่วโมง
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+        
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ตะกั่ว  </span>
+                        <span style="color: #A0F0D2;">Lead (Pb)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.5 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 เดือน
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ฝุ่นละอองรวมหรือฝุ่นละอองขนาดไม่เกิน100 ไมครอน  </span>
+                        <span style="color: #A0F0D2;">Total Suspended Particulate Matter (TSP)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                0.33 mg/m3<br/>
+                                0.10 mg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            24 ชั่วโมง<br/>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ฝุ่นละอองขนาดไม่เกิน 10 ไมครอน </span>
+                        <span style="color: #A0F0D2;">Particulate matter withanaerodynamic diameterless than or equal to a nominal 10 micrometers (PM10)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                120 μg/m3<br/>
+                                50 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            24 ชั่วโมง<br/>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน</span>
+                        <span style="color: #A0F0D2;">Particulate matter with anaerodynamic diameterless than or equal to a nominal 2.5 micrometers (PM2.5)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                120 μg/m3<br/>
+                                50 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            24 ชั่วโมง<br/>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ก๊าซคาร์บอนไดซัลไฟด์</span>
+                        <span style="color: #A0F0D2;">Carbon Disulfide (CS2)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                100 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            24 ชั่วโมง
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+        
+        </div>
+
+        <div class="flex-center flex-column" style="margin: 30px 0px;">
+            <span style=" color: #ffffff;">ค่ามาตรฐานสารอินทรีย์ระเหยง่าย (Volatile Organic Compounds; VOCs) (8)</span>
+            <div style="margin-top:10px ;background-color: #EEEEEE;border-radius: 10px;overflow: hidden;border: 1px solid #BBBBBB;">
+                <div style="padding: 14px;color: #666666;border-bottom: 1px solid #BBBBBB;">
+                    <div style="text-align: center;">
+                        <span>สารมลพิษในบรรยากาศ (Air Pollutants)</span>
+                    </div>
+                    <div style="margin: 10px 0px;width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex gap-4">
+                        <div>
+                            <span>ค่ามาตรฐาน (Standards)<br/>
+                                จะต้องไม่เกิน</span>
+                        </div>
+                        <div style="width: 1px;height: 100%x;background: #CCCCCC;"></div>
+                        <div >
+                            <span>ค่าเฉลี่ยเวลา<br/>(Avg. Time)</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="flex-column gap-4" style="padding: 10px;background: #E9FFF7;border-bottom:1px solid #CCCCCC ;">
+                     <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                         <span style="color: #FFFFFF;">เบนซีน  </span>
+                         <span style="color: #A0F0D2;">(Benzene)</span>
+                        </div>
+                        <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                        <div class="flex-between" style="align-items: start;color: #333333;">
+                            <div>
+                                <spna>1.7 μg/m3</spna>
+                            </div>
+                            <div>
+                                1 ปี
+                            </div>
+                            <img src="/svg/close.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                </div>
+                <div style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                    <div>
+                        <div style="padding: 16px; background-color: #EEEEEE;">
+                            <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                        </div>
+                        <div style="padding: 16px; background-color: #FFFFFF;">
+                            <span style="color: #333333;">US EPA Compendium Method TO-14A หรือ US EPA Compendium Method TO-15</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ไวนิลคลอไรด์</span>
+                        <span style="color: #A0F0D2;">(Vinyl Chloride)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.7 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">1,2 - ไดคลอโรอีเทน</span>
+                        <span style="color: #A0F0D2;">(1,2 - Dichloroethane)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.7 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ไตรคลอโรเอทธิลีน</span>
+                        <span style="color: #A0F0D2;">(Trichloroethylene)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.7 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">ไดคลอโรมีเทน</span>
+                        <span style="color: #A0F0D2;">(Dichloromethane)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.7 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">1,2 - ไดคลอโรโพรเพน</span>
+                        <span style="color: #A0F0D2;">(1,2 - Dichloropropane)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.7 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">เตตระคลอโรเอทธิลีน</span>
+                        <span style="color: #A0F0D2;">(Tetrachloroethylene)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.7 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">คลอโรฟอร์ม</span>
+                        <span style="color: #A0F0D2;">(Chloroform)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.7 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+                <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
+                    <div class="bg-g-main flex-column" style="border-radius: 10px;padding: 14px;width: 100%;">
+                        <span style="color: #FFFFFF;">1,3 - บิวทาไดอีน</span>
+                        <span style="color: #A0F0D2;">(1,3 - Butadiene)</span>
+                    </div>
+                    <div style="width: 100%;height: 1px;background: #CCCCCC;"></div>
+                    <div class="flex-between" style="align-items: start;color: #333333;">
+                        <div>
+                            <spna>
+                                1.7 μg/m3
+                            </spna>
+                        </div>
+                        <div>
+                            1 ปี
+                        </div>
+                        <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div class="container flex-column gap-2" style="width: 992px;max-width: 100%; color: white;">
+            <h4 style="font-weight: 600;">หมายเหตุ:
+                กรมควบคุมมลพิษออกประกาศวิธีตรวจวัดอื่นเพิ่มจากวิธีตรวจวัดตามประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</h4>
+            <ul style="font-weight: 400;margin: 0px 16px;">
+                <li>ppm คือ ส่วนในล้านส่วน</li>
+                <li>mg/m3 คือ มิลลิกรัมต่อลูกบาศก์เมตร</li>
+                <li>μg/m3 คือ ไมโครกรัมต่อลูกบาศก์เมตร</li>
+                <li>- คือ ไม่ได้กําหนด</li>
+            </ul>
+        </div>
+
+        <div class="container flex-column gap-2"
+            style="width: 992px;max-width: 100%; color: white;margin: 0px auto;">
+            <h4 style="font-weight: 500;">ดัดแปลงจาก</h4>
+            <p style="font-size: 12px;font-weight: 300;">
+                (1) ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ ฉบับที่ 10 (พ.ศ. 2538) เรื่อง
+                กําาหนดมาตรฐานคุณภาพอากาศในบรรยากาศโดยทั่วไป ประกาศ ณ วันที่ 17 เมษายน พ.ศ. 2538<br />
+                <br />
+                (2) ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ ฉบับที่ 21 (พ.ศ. 2544) เรื่อง
+                กําาหนดมาตรฐานค่าก๊าซซัลเฟอร์ไดออกไซด์ในบรรยากาศโดยทั่วไป ในเวลา 1 ชั่วโมง ประกาศ ณ วันที่ 9 เมษายน พ.ศ.
+                2544<br />
+                <br />
+                (3) ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ ฉบับที่ 24 (พ.ศ. 2547) เรื่อง
+                กําาหนดมาตรฐานคุณภาพอากาศในบรรยากาศโดยทั่วไป ประกาศ ณ วันที่ 9 สิงหาคม พ.ศ. 2547<br />
+                <br />
+                (4) ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ ฉบับที่ 28 (พ.ศ. 2550) เรื่อง
+                กําาหนดมาตรฐานคุณภาพอากาศในบรรยากาศโดยทั่วไป ประกาศ ณ วันที่ 10 เมษายน พ.ศ. 2550<br />
+                <br />
+                (5) ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ ฉบับที่ 33 (พ.ศ. 2552) เรื่อง
+                กําาหนดมาตรฐานค่าก๊าซไนโตรเจนไดออกไซด์ในบรรยากาศโดยทั่วไป ประกาศ ณ วันที่ 17 มิถุนายน พ.ศ. 2552<br />
+                <br />
+                (6) ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ เรื่อง กำหนดมาตรฐานฝุ่นละอองขนาดไม่เกิน 2.5 ไมครอน
+                ในบรรยากาศโดยทั่วไป ประกาศในราชกิจจานุเบกษา เล่ม 139 ตอนพิเศษ 163 ง ลงวันที่ 8 กรกฎาคม 2565<br />
+                <br />
+                (7) ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ เรื่อง กําาหนดมาตรฐานก๊าซคาร์บอนไดซัลไฟด์ในบรรยากาศโดยทั่วไป
+                ประกาศ ณ วันที่ 21 สิงหาคม 2560<br />
+                <br />
+                (8) ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ ฉบับที่ 30 (พ.ศ. 2550) เรื่อง
+                กําาหนดมาตรฐานค่าสารอินทรีย์ระเหยง่ายในบรรยากาศโดยทั่วไปในเวลา 1 ปี ประกาศ ณ วันที่ 14 กันยายน พ.ศ.
+                2550<br />
+                <br />
+                (9) ประกาศกรมควบคุมมลพิษ เรื่อง
+                เครื่องวัดและวิธีตรวจวัดค่าเฉลี่ยของก๊าซหรือฝุ่นละอองในบรรยากาศในบรรยากาศโดยทั่วไประบบอื่นหรือวิธีอื่นที่กรมควบคุมมลพิษเห็นชอบ
+                ประกาศ ณ วันที่ 2 สิงหาคม พ.ศ. 2562
+            </p>
+        </div>
+    </div>
+    </main>
+    <!-- footer -->
+    <footer class="bg-footer">
+        <div class="container container-footer" style="padding: 50px 0px; position: relative">
+            <div class="footer-temp">
+                <div style="gap: 20px; display: flex; flex-direction: column">
+                    <img src="/images/icon.png" alt="logo" style="width: 159px" />
+                    <div style="line-height: 20px">
+                        <h4 class="t-footer-h">สำนักสิ่งแวดล้อม</h4>
+                        <span class="text-color-2 text-sm">
+                            ศาลาว่าการกรุงเทพ(ดินแดง) <br />ถนนมิตรไมตรี เขตดินแดง กทม.
+                            10400</span>
+                    </div>
+                </div>
+                <div class="flex-column" style="gap: 25px">
+                    <h4 class="t-footer-h">ติดต่อเรา</h4>
+                    <div class="flex-column t-footer-contact" style="gap: 10px">
+                        <div class="flex gap-4">
+                            <img src="/svg/facebook.svg" alt="facebook" />
+                            <span>สำนักสิ่งแวดล้อม</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <img src="/svg/facebook.svg" alt="facebook" />
+                            <span>กองจัดการคุณภาพอากาศและเสียง</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <img src="/svg/facebook.svg" alt="facebook" />
+                            <span>กรุงเทพมหานคร</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-column" style="gap: 25px">
+                    <h4 class="t-footer-h">ลิงก์ที่เกี่ยวข้อง</h4>
+                    <div class="t-footer-s">
+                        <span>Air BKK</span>
+                        <span>SENSOR FOR ALL</span>
+                        <span>Windy</span>
+                        <span>Emission Inventory</span>
+                        <span>NASA Hotspot </span>
+                        <span>อัตราการระบายอากาศ</span>
+                        <span>Air4Thai</span>
+                        <span>สำหรับเจ้าหน้าที่</span>
+                    </div>
+                </div>
+                <div class="flex-column" style="gap: 40px">
+                    <div class="flex-column" style="gap: 10px">
+                        <h4 class="t-footer-h">
+                            กองจัดการคุณภาพอากาศและเสียงกรุงเทพมหานคร
+                        </h4>
+                        <div class="flex gap-2">
+                            <img src="/svg/phone.svg" alt="phone" />
+                            <span class="text-color-main">0-2203-2954</span>
+                        </div>
+                    </div>
+                    <div class="flex-column" style="gap: 4px">
+                        <h4 class="t-footer-s">จำนวนผู้เข้าใช้งาน</h4>
+                        <span class="text-color-main semi-bold">661547</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-column text-xs text-color-2 copyright" style="gap: 4px">
+                <span>© 2024 Bangkok Air Quality, </span>
+                <span>ALL RIGHT RESERVED</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

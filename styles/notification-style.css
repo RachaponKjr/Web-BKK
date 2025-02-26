@@ -1,0 +1,36 @@
+.input-noti {
+  height: 43px !important;
+}
+.textarea-style {
+  width: 100%;
+  min-height: 107px;
+  max-height: 107px;
+}
+.btn-noti {
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  width: 181px;
+  place-self: end;
+}
+@media (max-width: 575px) {
+  .box-info {
+    flex-direction: column;
+  }
+  .main-box-form {
+    gap: 24px !important;
+  }
+  .main-box-form {
+    margin: 20px 0px 60px 0 !important;
+  }
+  .textarea-style {
+    width: 100%;
+    min-height: 240px;
+    max-height: 240px;
+  }
+  .btn-noti {
+    width: 100%;
+  }
+}

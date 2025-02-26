@@ -23,7 +23,8 @@ a {
 
 .bg-image-bkk {
   background-image: url("../images/bkk_map.png");
-  background-size: cover;
+  background-size: contain;
+  background-position: start;
   background-repeat: no-repeat;
   height: 10rem;
 }
@@ -77,6 +78,9 @@ a {
 }
 .text-xl {
   font-size: 20px;
+}
+.text-22 {
+  font-size: 22px;
 }
 .text-2xl {
   font-size: 24px;
@@ -144,9 +148,20 @@ a {
   list-style: none;
 }
 
+.tag-status {
+  padding: 6px 2px;
+  display: flex;
+  color: #333333;
+  align-items: center;
+  border-radius: 4px;
+  justify-content: center;
+  line-height: 20px;
+  width: 100%;
+}
+
 .status-o {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   display: grid;
   place-content: center;
   border-radius: 100%;
@@ -155,8 +170,8 @@ a {
 
 .status-blue {
   background-color: #3ccbe9;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
 }
 
@@ -166,8 +181,8 @@ a {
 
 .status-green {
   background-color: #47dd91;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
 }
 
@@ -177,8 +192,8 @@ a {
 
 .status-yellow {
   background-color: #ffd359;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
 }
 
@@ -187,8 +202,8 @@ a {
 }
 .status-or {
   background-color: #ffb98b;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
 }
 
@@ -197,9 +212,25 @@ a {
 }
 .status-red {
   background-color: #ffbabc;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
+}
+
+.status-vary-good {
+  background-color: #9ceeff;
+}
+.status-good {
+  background-color: #85edb8;
+}
+.status-normal {
+  background-color: #ffe8a9;
+}
+.status-bad {
+  background-color: #ffb98b;
+}
+.status-vary-bad {
+  background-color: #ffbabc;
 }
 
 .status-b-red {
@@ -208,6 +239,33 @@ a {
 
 .input-style {
   height: 100%;
+  border-radius: 4px;
+  outline: none;
   flex-grow: 1;
   border: 1px solid #aaaaaa;
+}
+.select-style {
+  height: 43px;
+  width: 100%;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  outline: none;
+}
+
+.bg-g-main {
+  background: rgb(3, 117, 74);
+  background: linear-gradient(
+    90deg,
+    rgba(3, 117, 74, 1) 0%,
+    rgba(36, 167, 118, 1) 100%
+  );
+}
+
+.bg-g-2 {
+  background: rgb(5, 105, 66);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 105, 66, 1) 0%,
+    rgba(4, 73, 105, 1) 100%
+  );
 }

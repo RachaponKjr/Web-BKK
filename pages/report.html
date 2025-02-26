@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global-style.css" />
+    <link rel="stylesheet" href="../styles/navbar-style.css" />
+    <link rel="stylesheet" href="../styles/footer-style.css" />
+    <link rel="stylesheet" href="../styles/report-style.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-image-bkk" style="height: min-content">
+      <!-- Navbar -->
+      <nav class="container flex-between gap-7 navbar">
+        <img src="../images/icon.png" alt="logo" />
+        <div class="navbar-menu">
+          <ul class="list-style flex-between text-navbar gap-6">
+            <li><a href="index.html">แผนที่แสดงคุณภาพอากาศ</a></li>
+            <li><a href="air-infomation.html">ดัชนีคุณภาพอากาศ</a></li>
+            <li><a active href="/pages/report.html">รายงาน v</a></li>
+            <li><a href="#">ระบบระบายมลพิษทางอากาศ</a></li>
+            <li><a href="list-blogs.html">ข่าวสารประชาสัมพันธ์</a></li>
+            <li><a href="notification-news.html">แจ้งข่าวสาร</a></li>
+          </ul>
+        </div>
+        <!-- ปุ่มเปลี่ยนภาษา -->
+        <div class="toggle-lang flex-center" style="cursor: pointer">
+          <img src="/svg/thailand.svg" alt="thailand" />
+        </div>
+        <!-- hamburger menu -->
+        <div class="hamburger-menu" style="cursor: pointer; height: 32px">
+          <img src="/svg/hamburger-menu.svg" alt="" style="width: 24px" />
+        </div>
+      </nav>
+      <!-- Main -->
+      <main class="flex flex-column gap-4 container" style="padding: 30px 0px">
+        <div class="head-input">
+          <h5 class="text-2xl text-color-2" style="margin-bottom: 30px">
+            รายงานผลการตรวจวัด
+          </h5>
+          <div
+            class="flex flex-column gap-6 box-input"
+            style="padding: 30px; background: #ffffff; border-radius: 20px"
+          >
+            <div class="flex gap-6 select-info" style="width: 100%">
+              <div style="width: 100%">
+                <div>
+                  <span class="text-color-2">เลือกกลุ่มเขต</span>
+                  <div class="flex gap-4 select-group">
+                    <select class="select-style"></select>
+                    <select class="select-style"></select>
+                  </div>
+                </div>
+              </div>
+              <div class="select-station" style="min-width: 682px">
+                <div class="flex-between text-color-2">
+                  <span>สถานี</span>
+                  <span class="text-color-3">กรุณาเลือกอย่างน้อย 1 สถานี</span>
+                </div>
+                <select class="select-style"></select>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="flex gap-6 input-date" style="width: 100%">
+              <div style="width: 100%">
+                <div>
+                  <span class="text-color-2">ประเภทข้อมูล </span>
+                  <div class="flex gap-4">
+                    <div class="check-radio">
+                      <input type="radio" name="data-type" />
+                      <span class="text-color-2">รายชั่วโมง</span>
+                    </div>
+                    <div class="check-radio">
+                      <input type="radio" name="data-type" />
+                      <span>รายวัน</span>
+                    </div>
+                    <div class="check-radio">
+                      <input type="radio" name="data-type" />
+                      <span>รายเดือน</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-7 select-date" style="min-width: 682px">
+                <!-- ช่วงวันที่ -->
+                <div style="width: 100%">
+                  <div class="flex-between">
+                    <span class="text-color-2">ช่วงวันที่</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <div
+                      class="select-style"
+                      style="position: relative; cursor: pointer"
+                    >
+                      <img
+                        src="/svg/date.svg"
+                        style="position: absolute; top: 12px; left: 10px"
+                      />
+                    </div>
+                    <img src="/svg/arrow-left.svg" />
+                    <div
+                      class="select-style"
+                      style="position: relative; cursor: pointer"
+                    >
+                      <img
+                        src="/svg/date.svg"
+                        style="position: absolute; top: 12px; left: 10px"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- ช่วงเวลา -->
+                <div style="width: 100%">
+                  <div class="flex-between">
+                    <span class="text-color-2">ช่วงเวลา</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <div
+                      class="select-style"
+                      style="position: relative; cursor: pointer"
+                    >
+                      <img
+                        src="/svg/clock.svg"
+                        style="position: absolute; top: 12px; left: 10px"
+                      />
+                    </div>
+                    <img src="/svg/arrow-left.svg" />
+                    <div
+                      class="select-style"
+                      style="position: relative; cursor: pointer"
+                    >
+                      <img
+                        src="/svg/clock.svg"
+                        style="position: absolute; top: 12px; left: 10px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="flex gap-6 select-format" style="width: 100%">
+              <div style="width: 100%">
+                <div>
+                  <span class="text-color-2">รูปแบบ</span>
+                  <div class="flex gap-4">
+                    <div class="flex gap-4">
+                      <div class="check-radio pattern">
+                        <input type="radio" name="display-type" />
+                        <span>กราฟ</span>
+                      </div>
+                      <div class="check-radio pattern">
+                        <input type="radio" name="display-type" />
+                        <span>ตาราง</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex gap-7 box-btn"
+                style="
+                  min-width: 682px;
+                  align-items: center;
+                  justify-content: end;
+                "
+              >
+                <h4
+                  class="text-lg medium text-color-main"
+                  style="cursor: pointer; max-width: 100%"
+                >
+                  ล้างค่า
+                </h4>
+                <button
+                  class="text-color-w btn-show-info"
+                  style="background-color: #03754a; height: 47px; width: 195px"
+                >
+                  แสดงข้อมูล
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- กราฟ -->
+        <!-- ส่วนหัว -->
+        <div class="box-graph" style="border-radius: 20px; overflow: hidden">
+          <div>
+            <span>ทั้งหมด</span>
+            <span>ทั้งหมด</span>
+            <span>ทั้งหมด</span>
+            <span>ทั้งหมด</span>
+            <span>ทั้งหมด</span>
+          </div>
+          <!-- เนื้อหา -->
+          <div
+            class="chart-box"
+            style="
+              padding: 76px;
+              background-color: #ffffff;
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+            "
+          >
+            <div class="chart-container">
+              <canvas id="pm10Chart"></canvas>
+            </div>
+            <div class="chart-container">
+              <canvas id="pm25Chart"></canvas>
+            </div>
+            <div>
+              <div
+                class="flex gap-2"
+                style="padding: 40px 0px; border-top: 2px solid #d9d9d9"
+              >
+                <span class="text-color-2">CO :</span>
+                <span class="text-color-3">ไม่มีข้อมูล</span>
+              </div>
+              <div
+                class="flex gap-2"
+                style="padding: 40px 0px; border-top: 2px solid #d9d9d9"
+              >
+                <span class="text-color-2">NO2 :</span>
+                <span class="text-color-3">ไม่มีข้อมูล</span>
+              </div>
+              <div
+                class="flex gap-2"
+                style="padding: 40px 0px; border-top: 2px solid #d9d9d9"
+              >
+                <span class="text-color-2">O3 :</span>
+                <span class="text-color-3">ไม่มีข้อมูล</span>
+              </div>
+              <div
+                class="flex gap-2"
+                style="padding: 40px 0px; border-top: 2px solid #d9d9d9"
+              >
+                <span class="text-color-2">Wind Speed :</span>
+                <span class="text-color-3">ไม่มีข้อมูล</span>
+              </div>
+              <div
+                class="flex gap-2"
+                style="padding: 40px 0px; border-top: 2px solid #d9d9d9"
+              >
+                <span class="text-color-2">Wind Direction :</span>
+                <span class="text-color-3">ไม่มีข้อมูล</span>
+              </div>
+              <div
+                class="flex gap-2"
+                style="padding: 40px 0px; border-top: 2px solid #d9d9d9"
+              >
+                <span class="text-color-2">Temperature :</span>
+                <span class="text-color-3">ไม่มีข้อมูล</span>
+              </div>
+              <div
+                class="flex gap-2"
+                style="padding: 40px 0px; border-top: 2px solid #d9d9d9"
+              >
+                <span class="text-color-2">Relative Humidity :</span>
+                <span class="text-color-3">ไม่มีข้อมูล</span>
+              </div>
+              <div
+                class="flex gap-2"
+                style="padding: 40px 0px; border-top: 2px solid #d9d9d9"
+              >
+                <span class="text-color-2">Air Pressure :</span>
+                <span class="text-color-3">ไม่มีข้อมูล</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ตาราง -->
+        <div class="table-info-c">
+          <table>
+            <tr>
+              <th></th>
+              <th>PM10</th>
+              <th>PM2.5</th>
+              <th>WS</th>
+              <th>WD</th>
+              <th>Temp</th>
+              <th>RH</th>
+              <th>BP</th>
+            </tr>
+            <tr class="section-header">
+              <td colspan="8" style="text-align: start">เขตดินแดง</td>
+            </tr>
+            <tr>
+              <td>ค่ามากสุด</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>ค่าต่ำสุด</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>ค่าเฉลี่ย</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>จำนวนค่าที่ผิดปกติ</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr class="section-header">
+              <td colspan="8" style="text-align: start">เขตทุ่งครุ</td>
+            </tr>
+            <tr>
+              <td>ค่ามากสุด</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>ค่าต่ำสุด</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>ค่าเฉลี่ย</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>จำนวนค่าที่ผิดปกติ</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr class="section-header">
+              <td colspan="8" style="text-align: start">เขตคลองสาน</td>
+            </tr>
+            <tr>
+              <td>ค่ามากสุด</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>ค่าต่ำสุด</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>ค่าเฉลี่ย</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>จำนวนค่าที่ผิดปกติ</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr class="section-header">
+              <td colspan="8" style="text-align: start">เขตจตุจักร</td>
+            </tr>
+            <tr>
+              <td>ค่ามากสุด</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>ค่าต่ำสุด</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>ค่าเฉลี่ย</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+            <tr>
+              <td>จำนวนค่าที่ผิดปกติ</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+              <td>57<br />(22/10/2024 21:00)</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- ตาราง Mobile -->
+        <div class="table-m-air-menu" style="padding: 0px 16px;display: none;">
+          <div class="flex" style="background-color: #dedede">
+            <div
+              class="menu-air active"
+              style="width: 100%; padding: 10px 20px; text-align: center"
+            >
+              <span>PM10</span>
+            </div>
+            <div
+              class="menu-air"
+              style="width: 100%; padding: 10px 20px; text-align: center"
+            >
+              <span>PM2.5</span>
+            </div>
+            <div
+              class="menu-air"
+              style="width: 100%; padding: 10px 20px; text-align: center"
+            >
+              <span>WS</span>
+            </div>
+            <div
+              class="menu-air"
+              style="width: 100%; padding: 10px 20px; text-align: center"
+            >
+              <span>WD</span>
+            </div>
+            <div
+              class="menu-air"
+              style="width: 100%; padding: 10px 20px; text-align: center"
+            >
+              <span>Temp</span>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #DDDDDD;margin-top:18px ;color: #333333;">
+
+            <div class="flex-column">
+              <div class="flex flex-between bg-g-2" style="padding: 19px 10px;align-items: center;">
+                <span class="text-color-w">เขตคันนายาว</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="20" height="20" rx="10" fill="white" />
+                    <path
+                      d="M6 10L14 10"
+                      stroke="#03754A"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+              </div>
+              <div style="width: 100%;display: grid;grid-template-columns: repeat(2,1fr);">
+                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;border-right: 1px solid #DDDDDD;">
+                  <span>ค่าสูงสุด</span>
+                </div>
+                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;">
+                  <span>57 <br/> (22/10/2024 21:00)</span>
+                </div>
+                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;border-right: 1px solid #DDDDDD;">
+                  <span>ค่าต่ำสุด</span>
+                </div>
+                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;">
+                  <span>57 <br/> (22/10/2024 21:00)</span>
+                </div>
+                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;border-right: 1px solid #DDDDDD;">
+                  <span>ค่าเฉลี่ย</span>
+                </div>
+                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;">
+                  <span>57 <br/> (22/10/2024 21:00)</span>
+                </div>
+                <div style="padding: 10px;border-right: 1px solid #DDDDDD;">
+                  <span>จำนวนค่าผิดปกติ</span>
+                </div>
+                <div style="padding: 10px;">
+                  <span>57 <br/> (22/10/2024 21:00)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-column">
+              <div class="flex flex-between bg-g-2" style="padding: 19px 10px;align-items: center;">
+                <span class="text-color-w">เขตทุ่งครุ</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="20" height="20" rx="10" fill="white"/>
+                  <path d="M6 10L14 10" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 6L10 14" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+              </div>
+            </div>
+
+            <div class="flex-column">
+              <div class="flex flex-between bg-g-2" style="padding: 19px 10px;align-items: center;">
+                <span class="text-color-w">เขตคลองสาน</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="20" height="20" rx="10" fill="white"/>
+                  <path d="M6 10L14 10" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 6L10 14" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+              </div>
+            </div>
+
+            <div class="flex-column">
+              <div class="flex flex-between bg-g-2" style="padding: 19px 10px;align-items: center;">
+                <span class="text-color-w">เขตจตุจักร</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="20" height="20" rx="10" fill="white"/>
+                  <path d="M6 10L14 10" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 6L10 14" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                  
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+      <!-- footer -->
+      <footer class="bg-footer">
+        <div
+          class="container container-footer"
+          style="padding: 50px 0px; position: relative"
+        >
+          <div class="footer-temp">
+            <div style="gap: 20px; display: flex; flex-direction: column">
+              <img src="/images/icon.png" alt="logo" style="width: 159px" />
+              <div style="line-height: 20px">
+                <h4 class="t-footer-h">สำนักสิ่งแวดล้อม</h4>
+                <span class="text-color-2 text-sm">
+                  ศาลาว่าการกรุงเทพ(ดินแดง) <br />ถนนมิตรไมตรี เขตดินแดง กทม.
+                  10400</span
+                >
+              </div>
+            </div>
+            <div class="flex-column" style="gap: 25px">
+              <h4 class="t-footer-h">ติดต่อเรา</h4>
+              <div class="flex-column t-footer-contact" style="gap: 10px">
+                <div class="flex gap-4">
+                  <img src="/svg/facebook.svg" alt="facebook" />
+                  <span>สำนักสิ่งแวดล้อม</span>
+                </div>
+                <div class="flex gap-4">
+                  <img src="/svg/facebook.svg" alt="facebook" />
+                  <span>กองจัดการคุณภาพอากาศและเสียง</span>
+                </div>
+                <div class="flex gap-4">
+                  <img src="/svg/facebook.svg" alt="facebook" />
+                  <span>กรุงเทพมหานคร</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex-column" style="gap: 25px">
+              <h4 class="t-footer-h">ลิงก์ที่เกี่ยวข้อง</h4>
+              <div class="t-footer-s">
+                <span>Air BKK</span>
+                <span>SENSOR FOR ALL</span>
+                <span>Windy</span>
+                <span>Emission Inventory</span>
+                <span>NASA Hotspot </span>
+                <span>อัตราการระบายอากาศ</span>
+                <span>Air4Thai</span>
+                <span>สำหรับเจ้าหน้าที่</span>
+              </div>
+            </div>
+            <div class="flex-column" style="gap: 40px">
+              <div class="flex-column" style="gap: 10px">
+                <h4 class="t-footer-h">
+                  กองจัดการคุณภาพอากาศและเสียงกรุงเทพมหานคร
+                </h4>
+                <div class="flex gap-2">
+                  <img src="/svg/phone.svg" alt="phone" />
+                  <span class="text-color-main">0-2203-2954</span>
+                </div>
+              </div>
+              <div class="flex-column" style="gap: 4px">
+                <h4 class="t-footer-s">จำนวนผู้เข้าใช้งาน</h4>
+                <span class="text-color-main semi-bold">661547</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex-column text-xs text-color-2 copyright"
+            style="gap: 4px"
+          >
+            <span>© 2024 Bangkok Air Quality, </span>
+            <span>ALL RIGHT RESERVED</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/scripts/radio-checkl-time.js"></script>
+    <script src="/scripts/chart-graph.js"></script>
+  </body>
+</html>
