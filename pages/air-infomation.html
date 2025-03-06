@@ -316,14 +316,13 @@
                                             <h4 class="text-color-2" style="width: 126px;">ความหมาย</h4>
                                             <div class="flex gap-4" style="width: 100%;">
                                                 <span class="tag-status status-vary-good"> อากาศดีมาก </span>
-                                                <img src="/svg/close.svg" alt="" class="toggle-info-btn"
+                                                <img src="/svg/open.svg" alt="" class="toggle-info-btn"
                                                     style="margin: 0 10px" />
                                             </div>
                                         </div>
-                                        <div style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
+                                        <div class="info-detail" style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
                                             <span class="text-color-2">ประชาชนทุกคนสามารถดำเนินชีวิตได้ตามปกติ</span>
                                         </div>
-
                                     </div>
 
                                     <div class="flex-column gap-4"
@@ -345,11 +344,11 @@
                                             <h4 class="text-color-2" style="width: 126px;">ความหมาย</h4>
                                             <div class="flex gap-4" style="width: 100%;">
                                                 <span class="tag-status status-good"> อากาศดี </span>
-                                                <img src="/svg/close.svg" alt="" class="toggle-info-btn"
+                                                <img src="/svg/open.svg" alt="" class="toggle-info-btn"
                                                     style="margin: 0 10px" />
                                             </div>
                                         </div>
-                                        <div style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
+                                        <div class="info-detail" style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
                                             <span class="text-color-2">
                                                 <strong>ประชาชนทั่วไป :</strong> สามารถทำกิจกรรมกลางแจ้ง
                                                 ได้ตามปกติฒ<br />
@@ -383,6 +382,11 @@
                                                     style="margin: 0 10px" />
                                             </div>
                                         </div>
+                                        <div class="info-detail" style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
+                                            <span class="text-color-2">
+                                                ใส่ข้อมูลที่ต้องการแสดง
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="flex-column gap-4"
                                         style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #666666 ;">
@@ -407,6 +411,11 @@
                                                     style="margin: 0 10px" />
                                             </div>
                                         </div>
+                                        <div class="info-detail" style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
+                                            <span class="text-color-2">
+                                                ใส่ข้อมูลที่ต้องการแสดง
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="flex-column gap-4"
                                         style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #666666 ;">
@@ -430,6 +439,9 @@
                                                 <img src="/svg/open.svg" alt="" class="toggle-info-btn"
                                                     style="margin: 0 10px" />
                                             </div>
+                                        </div>
+                                        <div class="info-detail" style="padding: 16px;border-radius: 10px; background-color: #ffffff;">
+                                            <span class="text-color-2">ใส่ข้อมูลที่ต้องการแสดง</span>
                                         </div>
                                     </div>
 
@@ -797,28 +809,534 @@
         <div class="table-info-air-mobile" style="display: none;">
             <div style="width: 100%; overflow-y: auto; max-height: 200px;">
                 <div class="text-sm" style="display: grid; grid-template-columns: repeat(6, 1fr);">
-                    <div class="menu-pm" active style="text-align: center; padding: 10px 20px;width: max-content;">
+                    <div id="PM2.5" class="menu-pm" active style="text-align: center; padding: 10px 20px;width: max-content;">
                         <span>PM2.5<br />(มคก./ลบ.ม.)</span>
                     </div>
-                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                    <div id="PM10" class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
                         <span>PM10<br />(มคก./ลบ.ม.)</span>
                     </div>
-                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                    <div id="O3" class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
                         <span>O3<br />(ppb)</span>
                     </div>
-                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                    <div id="CO" class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
                         <span>CO<br />(ppm)</span>
                     </div>
-                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                    <div id="NO2" class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
                         <span>NO2<br />(ppb)</span>
                     </div>
-                    <div class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
+                    <div id="SO2" class="menu-pm" style="text-align: center; padding: 10px 20px;width: max-content;">
                         <span>SO2<br />(ppb)</span>
                     </div>
                 </div>
             </div>
             <div style="margin: 20px 0px;position: relative; ">
-                <table class="table-mobile-status" style="width: 300px;margin: 0px auto;">
+                <!-- ตาราง PM2.5 -->
+                <table id="PM2.5" index="0" class="table-mobile-status" style="width: 300px;margin: 0px auto;">
+                    <tr>
+                        <th style="width: 150px;">AQI</th>
+                        <th style="width: 150px">เฉลี่ย 24 ชั่วโมง</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- ตาราง PM10 -->
+                <table id="PM10" index="1" class="table-mobile-status" style="width: 300px;margin: 0px auto;display: none;">
+                    <tr>
+                        <th style="width: 150px;">AQI</th>
+                        <th style="width: 150px">เฉลี่ย 24 ชั่วโมง</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- ตาราง O3 -->
+                <table id="O3" index="2" class="table-mobile-status" style="width: 300px;margin: 0px auto;display: none;">
+                    <tr>
+                        <th style="width: 150px;">AQI</th>
+                        <th style="width: 150px">เฉลี่ย 24 ชั่วโมง</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- ตาราง CO -->
+                <table id="CO" index="3" class="table-mobile-status" style="width: 300px;margin: 0px auto;display: none;">
+                    <tr>
+                        <th style="width: 150px;">AQI</th>
+                        <th style="width: 150px">เฉลี่ย 24 ชั่วโมง</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- ตาราง NO2 -->
+                <table id="NO2" index="4" class="table-mobile-status" style="width: 300px;margin: 0px auto;display: none;">
+                    <tr>
+                        <th style="width: 150px;">AQI</th>
+                        <th style="width: 150px">เฉลี่ย 24 ชั่วโมง</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-blue">
+                                    <div class="status-blue"></div>
+                                </div>
+                                <spna>0 - 25</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-green">
+                                    <div class="status-green"></div>
+                                </div>
+                                <spna>26 - 50</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-yellow">
+                                    <div class="status-yellow"></div>
+                                </div>
+                                <spna>51 - 100</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-or">
+                                    <div class="status-or"></div>
+                                </div>
+                                <spna>101 - 200</spna>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: grid;place-items: center;">
+                                <div class="status-o status-b-red">
+                                    <div class="status-red"></div>
+                                </div>
+                                <spna>201 ขึ้นไป</spna>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- ตาราง SO2 -->
+                <table id="SO2" index="5" class="table-mobile-status" style="width: 300px;margin: 0px auto;display: none;">
                     <tr>
                         <th style="width: 150px;">AQI</th>
                         <th style="width: 150px">เฉลี่ย 24 ชั่วโมง</th>
@@ -919,6 +1437,7 @@
                     </tr>
                 </table>
                 <div
+                    id="btn-left"
                     style="top: 50%;left: 0px;width: 32px;aspect-ratio: 1/1;border-radius: 100%;position: absolute;background: #DFDFDF;display: grid;place-content: center;">
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.00012 1L0.999863 7.00026" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -928,6 +1447,7 @@
                     </svg>
                 </div>
                 <div
+                    id="btn-right"
                     style="top: 50%;right: 0px;width: 32px;aspect-ratio: 1/1;border-radius: 100%;position: absolute;background: #03754A;display: grid;place-content: center;">
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.999878 1L7.00014 7.00026" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -950,7 +1470,7 @@
                 <li>SO2 เฉลี่ย 1 ชั่วโมง : ส่วนในพันล้านส่วน หรือ ppb หรือ 1/1,000,000,000</li>
             </ul>
         </div>
-    </div>
+            </div>
 
     <!-- ส่วนที่ 3 -->
     <div class="bg-color-green main-table-three flex-column gap-6" style="padding: 60px 0px;">
@@ -1412,7 +1932,7 @@
                             </div>
                             <img src="/svg/close.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                 </div>
-                <div style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
                     <div>
                         <div style="padding: 16px; background-color: #EEEEEE;">
                             <span class="text-color-2 semi-bold">ประชาชนทุกคนสามารถดำเนินชีวิตได้ตามปกติ</span>
@@ -1453,6 +1973,16 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
             </div>
+            <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                <div>
+                    <div style="padding: 16px; background-color: #EEEEEE;">
+                        <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                    </div>
+                    <div style="padding: 16px; background-color: #FFFFFF;">
+                        <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                    </div>
+                </div>
+            </div>
             
                 </div>
 
@@ -1474,6 +2004,16 @@
                             1 ปี
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+            </div>
+            <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                <div>
+                    <div style="padding: 16px; background-color: #EEEEEE;">
+                        <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                    </div>
+                    <div style="padding: 16px; background-color: #FFFFFF;">
+                        <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                    </div>
+                </div>
             </div>
             
                 </div>
@@ -1497,6 +2037,16 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                     </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
         
                 <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
@@ -1515,6 +2065,16 @@
                             1 เดือน
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1537,6 +2097,16 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                     </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
@@ -1557,6 +2127,16 @@
                             1 ปี
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1579,6 +2159,16 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                     </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;">
@@ -1598,13 +2188,23 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                     </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
         
         </div>
 
-        <div class="flex-center flex-column" style="margin: 30px 0px;">
+        <div class="flex-center flex-column" style="margin: 30px 0px; ">
             <span style=" color: #ffffff;">ค่ามาตรฐานสารอินทรีย์ระเหยง่าย (Volatile Organic Compounds; VOCs) (8)</span>
-            <div style="margin-top:10px ;background-color: #EEEEEE;border-radius: 10px;overflow: hidden;border: 1px solid #BBBBBB;">
+            <div style="margin-top:10px ;background-color: #EEEEEE;border-radius: 10px;overflow: hidden;border: 1px solid #BBBBBB;width: 100%;">
                 <div style="padding: 14px;color: #666666;border-bottom: 1px solid #BBBBBB;">
                     <div style="text-align: center;">
                         <span>สารมลพิษในบรรยากาศ (Air Pollutants)</span>
@@ -1635,9 +2235,9 @@
                             <div>
                                 1 ปี
                             </div>
-                            <img src="/svg/close.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                            <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                 </div>
-                <div style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
                     <div>
                         <div style="padding: 16px; background-color: #EEEEEE;">
                             <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
@@ -1666,6 +2266,16 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                     </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
@@ -1684,6 +2294,16 @@
                             1 ปี
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1704,6 +2324,16 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                     </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
@@ -1722,6 +2352,16 @@
                             1 ปี
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1742,6 +2382,16 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                     </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
@@ -1760,6 +2410,16 @@
                             1 ปี
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1780,6 +2440,16 @@
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
                     </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flex-column gap-4" style="padding: 10px;background: #FFFFFF;border-bottom:1px solid #CCCCCC ;">
@@ -1798,6 +2468,16 @@
                             1 ปี
                         </div>
                         <img src="/svg/open.svg" alt="" class="toggle-info-btn" style="margin: 0 10px" />
+                    </div>
+                    <div class="info-detail" style="border-radius: 10px;border: 1px solid #DDDDDD;overflow: hidden;">
+                        <div>
+                            <div style="padding: 16px; background-color: #EEEEEE;">
+                                <span class="text-color-2 semi-bold">ประกาศคณะกรรมการสิ่งแวดล้อมแห่งชาติ</span>
+                            </div>
+                            <div style="padding: 16px; background-color: #FFFFFF;">
+                                <span>ใส่ข้อมูลที่ต้องการแสดง</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1919,6 +2599,8 @@
             </div>
         </div>
     </footer>
+    <script src="/scripts/table-info-air.js"></script>
+    <script src="/scripts/mobile-aqi-table.js"></script>
 </body>
 
 </html>

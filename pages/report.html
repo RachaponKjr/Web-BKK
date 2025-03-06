@@ -58,8 +58,10 @@
             z-index: 1000;
           "
         >
-          <div class="menumobile" >
-            <div style="display: flex;justify-content: flex-end;padding: 10px;">
+          <div class="menumobile">
+            <div
+              style="display: flex; justify-content: flex-end; padding: 10px"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -67,7 +69,7 @@
                 width="20"
                 height="20"
                 viewBox="0 0 30 30"
-                style="color: #03754a;"
+                style="color: #03754a"
               >
                 <path
                   d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"
@@ -246,7 +248,15 @@
         <!-- กราฟ -->
         <!-- ส่วนหัว -->
         <div class="box-graph" style="border-radius: 20px; overflow: hidden">
-          <div class="menu-graph" style="width: 100%; display: flex;align-items: center;justify-content: space-between;">
+          <div
+            class="menu-graph"
+            style="
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
             <span active>ทั้งหมด</span>
             <span>PM10</span>
             <span>PM2.5</span>
@@ -525,7 +535,7 @@
         </div>
 
         <!-- ตาราง Mobile -->
-        <div class="table-m-air-menu" style="padding: 0px 16px;display: none;">
+        <div class="table-m-air-menu" style="padding: 0px 16px; display: none">
           <div class="flex" style="background-color: #dedede">
             <div
               class="menu-air active"
@@ -559,91 +569,256 @@
             </div>
           </div>
 
-          <div style="border: 1px solid #DDDDDD;margin-top:18px ;color: #333333;">
-
+          <div
+            style="border: 1px solid #dddddd; margin-top: 18px; color: #333333"
+          >
             <div class="flex-column">
-              <div class="flex flex-between bg-g-2" style="padding: 19px 10px;align-items: center;">
+              <div
+                class="flex flex-between bg-g-2"
+                style="padding: 19px 10px; align-items: center"
+              >
                 <span class="text-color-w">เขตคันนายาว</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <img src="/svg/open.svg" alt="open" class="toggle-info-btn" />
+              </div>
+              <div class="info-detail">
+                <div
+                  style="
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                  "
+                >
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
                   >
-                    <rect width="20" height="20" rx="10" fill="white" />
-                    <path
-                      d="M6 10L14 10"
-                      stroke="#03754A"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-              </div>
-              <div style="width: 100%;display: grid;grid-template-columns: repeat(2,1fr);">
-                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;border-right: 1px solid #DDDDDD;">
-                  <span>ค่าสูงสุด</span>
-                </div>
-                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;">
-                  <span>57 <br/> (22/10/2024 21:00)</span>
-                </div>
-                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;border-right: 1px solid #DDDDDD;">
-                  <span>ค่าต่ำสุด</span>
-                </div>
-                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;">
-                  <span>57 <br/> (22/10/2024 21:00)</span>
-                </div>
-                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;border-right: 1px solid #DDDDDD;">
-                  <span>ค่าเฉลี่ย</span>
-                </div>
-                <div style="padding: 10px; border-bottom: 1px solid #DDDDDD;">
-                  <span>57 <br/> (22/10/2024 21:00)</span>
-                </div>
-                <div style="padding: 10px;border-right: 1px solid #DDDDDD;">
-                  <span>จำนวนค่าผิดปกติ</span>
-                </div>
-                <div style="padding: 10px;">
-                  <span>57 <br/> (22/10/2024 21:00)</span>
+                    <span>ค่าสูงสุด</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าต่ำสุด</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าเฉลี่ย</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div style="padding: 10px; border-right: 1px solid #dddddd">
+                    <span>จำนวนค่าผิดปกติ</span>
+                  </div>
+                  <div style="padding: 10px">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="flex-column">
-              <div class="flex flex-between bg-g-2" style="padding: 19px 10px;align-items: center;">
+              <div
+                class="flex flex-between bg-g-2"
+                style="padding: 19px 10px; align-items: center"
+              >
                 <span class="text-color-w">เขตทุ่งครุ</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="20" height="20" rx="10" fill="white"/>
-                  <path d="M6 10L14 10" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M10 6L10 14" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  
+                <img src="/svg/open.svg" alt="open" class="toggle-info-btn" />
+              </div>
+              <div class="info-detail">
+                <div
+                  style="
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                  "
+                >
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าสูงสุด</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าต่ำสุด</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าเฉลี่ย</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div style="padding: 10px; border-right: 1px solid #dddddd">
+                    <span>จำนวนค่าผิดปกติ</span>
+                  </div>
+                  <div style="padding: 10px">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="flex-column">
-              <div class="flex flex-between bg-g-2" style="padding: 19px 10px;align-items: center;">
+              <div
+                class="flex flex-between bg-g-2"
+                style="padding: 19px 10px; align-items: center"
+              >
                 <span class="text-color-w">เขตคลองสาน</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="20" height="20" rx="10" fill="white"/>
-                  <path d="M6 10L14 10" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M10 6L10 14" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  
+                <img src="/svg/open.svg" alt="open" class="toggle-info-btn" />
+              </div>
+              <div class="info-detail">
+                <div
+                  style="
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                  "
+                >
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าสูงสุด</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าต่ำสุด</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าเฉลี่ย</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div style="padding: 10px; border-right: 1px solid #dddddd">
+                    <span>จำนวนค่าผิดปกติ</span>
+                  </div>
+                  <div style="padding: 10px">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="flex-column">
-              <div class="flex flex-between bg-g-2" style="padding: 19px 10px;align-items: center;">
+              <div
+                class="flex flex-between bg-g-2"
+                style="padding: 19px 10px; align-items: center"
+              >
                 <span class="text-color-w">เขตจตุจักร</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="20" height="20" rx="10" fill="white"/>
-                  <path d="M6 10L14 10" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M10 6L10 14" stroke="#03754A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                  
+                <img src="/svg/open.svg" alt="open" class="toggle-info-btn" />
+              </div>
+              <div class="info-detail">
+                <div
+                  style="
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                  "
+                >
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าสูงสุด</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าต่ำสุด</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #dddddd;
+                      border-right: 1px solid #dddddd;
+                    "
+                  >
+                    <span>ค่าเฉลี่ย</span>
+                  </div>
+                  <div style="padding: 10px; border-bottom: 1px solid #dddddd">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                  <div style="padding: 10px; border-right: 1px solid #dddddd">
+                    <span>จำนวนค่าผิดปกติ</span>
+                  </div>
+                  <div style="padding: 10px">
+                    <span>57 <br /> (22/10/2024 21:00)</span>
+                  </div>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
       </main>
@@ -722,5 +897,6 @@
     </div>
     <script src="/scripts/radio-checkl-time.js"></script>
     <script src="/scripts/chart-graph.js"></script>
+    <script src="/scripts/mobile-aqi-table.js"></script>
   </body>
 </html>
